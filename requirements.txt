@@ -1,0 +1,4 @@
+black
+django
+django-crispy-forms
+crispy-bootstrap4
