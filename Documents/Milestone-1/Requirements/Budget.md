@@ -19,3 +19,21 @@ The numbers I came up with to the estimate this budget are all very rough estima
 * There may be other misc. operating expenses
 	* A rough estimate is $250.00
 * So the total project cost is about 5760 + 20 + 250 = $6030.00
+
+## Milestone Timeline
+
+All dates are pulled from the syllabus and are subject to change.
+
+* Milestone 1: Project Charter (Project Plan Complete) - 8/21 - 8/30
+
+* Milestone 2: Software Design and Architecture (Technology Proven) - 9/4 - 9/13
+
+* Milestone 3: Implementation and Coding (Core Features) - 9/18 - 9/27
+
+* Milestone 4: Testing and Quality Assurance (Functional Complete) - 10/2 - 10/11
+
+* Milestone 5: Deployment and Release Management (Test Complete) - 10/16 - 10/25
+
+* Milestone 6: User Feedback and Enhancement (Software Release) - 10/30 - 11/8
+
+* Milestone 7: Project Closeout (First Upgrade) - 11/13 - 12/1

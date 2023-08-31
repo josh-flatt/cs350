@@ -14,4 +14,4 @@
 
 We will meet with the client/project sponsor to discuss our progress every 2 weeks at minimum.
 We will be prepared to show our progress, get feedback, and refine our requirements with them.
-This will help us endure that our project remains aligned to our business goals.
+This will help us ensure that our project remains aligned to our business goals.

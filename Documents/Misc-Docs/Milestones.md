@@ -60,7 +60,7 @@ In this milestone, we will conduct a project review and analyze the project perf
 document any lessons learned and prepare a final report. We will celebrate our successes and
 identify areas for improvement for future projects.
 
-
+---
 ## Development Roles
 
 Throughout this project students will perform a unique role: requirements, design, code, test.  
