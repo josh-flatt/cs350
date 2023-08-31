@@ -28,8 +28,7 @@ SECRET_KEY = ve.secret_key
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    "localhost",
-    "127.0.0.1",
+    "*",
 ]
 
 
