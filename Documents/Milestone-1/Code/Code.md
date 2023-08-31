@@ -2,7 +2,7 @@
 
 Create a simple app that runs on the server.
 
-It does not do anything interesting other that show a hard-coded web page.
+It does not do anything interesting other than show a hard-coded web page.
 
 
 ## What I did 
@@ -19,40 +19,64 @@ Install development tools
 
 Create a Django app 
 
-    mkdir GhostWriterApp
+    mkdir Application/BridgeOut
     
-    cd GhostWriterApp
+    cd Application/Bridgeout
 
-    python -m django startproject config .
+    python -m django startproject BridgeOut .
+    
+    cd ..
 
-    python manage.py startapp publish
+    mkdir apps
+    
+    cd apps
+
+    python manage.py startapp helloapp
 
 config/settings.py
 
-    ALLOWED_HOSTS = ['*']
-
-    INSTALLED_APPS = [
-        ...
-        'django.contrib.staticfiles',
-        'publish',
+    ALLOWED_HOSTS = [
+    "*",
     ]
 
-publish/views.py
+    INSTALLED_APPS = [
+        "django.contrib.admin",
+        "django.contrib.auth",
+        "django.contrib.contenttypes",
+        "django.contrib.sessions",
+        "django.contrib.messages",
+        "django.contrib.staticfiles",
+        # Styling
+        "crispy_forms",
+        "crispy_bootstrap4",
+        # Apps
+        "apps.helloapp",
+    ]
 
-    from django.http import HttpResponse
-    from django.views import View
+apps/helloapp/views_functions.py
 
-    class HelloWorldView(View):
-        def get(self, request):
-            return HttpResponse("Hello, World!")
+    def helloView(request):
+        return render(request, "helloView.html")
 
-config/urls.py
+BridgeOut/urls.py
 
-    from django.urls import path
-    from publish.views import HelloWorldView
+    from django.urls import path, include
+    from django.views.generic import RedirectView
 
     urlpatterns = [
-        path('hello/', HelloWorldView.as_view(), name='hello'),
+        path("", RedirectView.as_view(url="helloapp/")),
+        path("admin/", admin.site.urls),
+        path("helloapp/", include("apps.helloapp.urls")),
+    ]
+
+apps/helloapp/urls.py
+
+    from django.urls import path
+    import apps.helloapp.views_classes as vc
+    import apps.helloapp.views_functions as vf
+
+    urlpatterns = [
+        path("", vf.helloView, name="hello_view"),
     ]
 
 Run Server
@@ -71,4 +95,4 @@ Display markdown text from a document files that read.
 
 ## Concerns and Challenges
 
-
+So far, so good...
