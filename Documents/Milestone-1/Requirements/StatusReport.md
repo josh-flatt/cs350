@@ -40,6 +40,10 @@ ensuring that the project remains on track and that everyone is aligned on the i
 I created a summary of the requirements work completed.  View the video at 
 [Milestone 1 - Requirements](Video.md)
 
+## Engineering Investment
+
+I spent about TODO hours on Requirements for Milestone 1.
+Our team met for a total of TODO hours this week.
 
 ## What I will do for Milestone 2
 
