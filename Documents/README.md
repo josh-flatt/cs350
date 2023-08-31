@@ -13,7 +13,7 @@ project is done by a series of milestones.
 * [Project Charter](Milestone-1/Requirements/index.md) - The first milestone is to 
 make key decisions about the project scope and how to meet the key objectives
 with technology.
-    * [Requirements](Milestone-1/Requirements/index.md)
-    * [Design](Milestone-1/Design/index.md)
-    * [Code](Milestone-1/Code/index.md)
-    * [Test](Milestone-1/Test/index.md)
+    * [Requirements](Milestone-1/Requirements/Index.md)
+    * [Design](Milestone-1/Design/Index.md)
+    * [Code](Milestone-1/Code/Index.md)
+    * [Test](Milestone-1/Test/Index.md)
