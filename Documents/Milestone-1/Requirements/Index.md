@@ -7,11 +7,10 @@
     * [Timeline and Budget](Budget.md)
 
 * [Engineering Report](StatusReport.md)
-    * TODO
     * What did I do?
-    * 5-minute Staus Video
     * Engineering investment
     * What will I do?
+    * 5-minute Staus Video
     * What challenges do I have?
     
 * [AI Playbook](AI.md)
@@ -20,6 +19,6 @@
     * Potential Challenges
     * Success Stories
 
-* [Client Video](ClientVideo.md)
-    * TODO
-    * Make a client vid
+* [Client Video](https://drive.google.com/file/d/1xXiJfo6HXxfP8IiBjeGvAUJFdBOht4Wr/view?usp=sharing)
+    * Broad overview of project
+    * Reviews elements of the charter

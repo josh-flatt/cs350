@@ -1,62 +1,49 @@
 
 ## What I did for Milestone 1
 
-1. Requirement Gathering: 
+1. Project Charter:
+ 
+	I put together all of the project charter documents which can be found at [BridgeOut - Project Charter](Index.md)
 
-The requirements of the Ghost Writer applications were defined by the needs of potential authors
-that need support in the overall process of writing.  The results of the  Requirement Gathering
-are documented in the [Ghost Writer - Product Features](GhostWriter-ProductFeatures.md).
+2. General Fixes and Formatting
+ 
+	I fixed and created links in some of the pages such as the instructor page and the readme for milestone 1, as well as fixing some formatting bugs.
 
+2. AI Playbook
+ 
+	I put together my first AI playbook which can be found at [BridgeOut - AI](AI.md)
 
-2. Prioritization and Scope Definition: 
+3. Client Video
+ 
+	I created a video going over the broad idea of the project and the charter. View the video at [BridgeOut - Client Video](https://drive.google.com/file/d/1xXiJfo6HXxfP8IiBjeGvAUJFdBOht4Wr/view?usp=sharing)
 
-The product features support goals of writers who want guidance during development and instant
-publishing of the result. The project scope and priorities and feature set are all documented
-in the [Ghost Writer - Product Features](GhostWriter-ProductFeatures.md).
+4. Status Update Video
 
-
-3. Stakeholder Review and Approval: 
-
-Since this project has started I have been reviewing the features and  project plans with
-people that would be potential customers for this project.  I plan on continuing this 
-review process and intend to allow feedback to influence the development throughout the
-entire project.
-
-I also intend to produce a video at every stage of the development to explain how the
-system works.  This may spark some additional feedback and renewed interest in the project.
-
-
-4. Milestone Review: 
-
-Because this project is not being done to satisfy external stakeholders there is no formal
-milestone review meeting or presentation.  On a more typical project this is important
-for a comprehensive assessment of the completed tasks, progress, and stakeholder satisfaction. 
-It provides an opportunity to address any potential issues or gaps before moving forward, 
-ensuring that the project remains on track and that everyone is aligned on the initial requirements.
-
-
-5. Status Video 
-
-I created a summary of the requirements work completed.  View the video at 
-[Milestone 1 - Requirements](Video.md)
+	I created a summary of the requirements work completed. View the video at [BridgeOut - Status Update Video](Video.md)
 
 ## Engineering Investment
 
-I spent about TODO hours on Requirements for Milestone 1.
-Our team met for a total of TODO hours this week.
+I spent about 4 hours on Requirements for Milestone 1.
+Our team met for a total of about 2 hours this week.
 
 ## What I will do for Milestone 2
 
-Plan out 3 phases of implmentation (core features, full features, bonus features).
+For Milestone 2, I will move to the position of designer.
 
-Build customer/stakeholder communication
+I will make sure that all of our chosen tech stack is up and running and that everything is structured correctly.
 
-Create team project communication and planning
+I will work with the coder and the rest of the team to get a server stood up (pending further instruction from the professor).
 
-Update product requirements
+I will gather reference resources for our tech stack and make sure people have access to them.
 
+I will consult with members of my team to learn more about tech I am inexperienced with such as Docker and Django.
+
+I will begin to draft high-level plans on how we can implement the core features of the app.
+
+I will begin data modeling and creating ERDs.
+
+I will begin to make diagrams showcasing the UI of the app.
 
 ## Concerns and Challenges
 
-I am not quite sure about how integrate ChatGPT into Ghost Writer.
-
+I need to learn more about Docker, Django, and likely AWS technologies. I will require a greater time investment to get up to speed.
