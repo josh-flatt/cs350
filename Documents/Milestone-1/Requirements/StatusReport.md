@@ -19,7 +19,7 @@
 
 4. Status Update Video
 
-	I created a summary of the requirements work completed. View the video at [BridgeOut - Status Update Video](Video.md)
+	I created a summary of the requirements work completed. View the video at [BridgeOut - Status Update Video](https://drive.google.com/file/d/1tduuTAXvqDdbOjFPkogxSnc_P388PK8H/view?usp=sharing)
 
 ## Engineering Investment
 
