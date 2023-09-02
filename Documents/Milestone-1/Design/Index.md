@@ -1,4 +1,4 @@
-# Design - Mark Seaman
+# Design - Evan Duffield
 
 **Designer Responsibilities**
 

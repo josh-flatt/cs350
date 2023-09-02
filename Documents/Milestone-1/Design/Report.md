@@ -1,18 +1,18 @@
-# Engineering Report
+# Engineering Report - Evan Duffield
 
-## Milestone 1 - Design - Mark Seaman
+## Milestone 1 - Design - Evan Duffield
 
 * What did I do?
-    * Decided on technology and tools for Ghost Writer
-    * Setup dev tools and train team
-    * Work with team
+    * Worked with team on preferred tech stack
+    * Decided on technology and tools for LinkedIn clone
+    * Setup dev tools and readme for team
 * What will I do?  Design for Milestone 2
-    * Integrate Open AI into app
+    * Link our GitHub repository to an AWS server
 * What challenges do I have?
-    * Need to get an Open AI key
+    * Need to setup AWS accounts for groupmembers
 * Engineering investment
-    * I spent about 10 hours on Design for Milestone 1
-    * Our team met for 0 hours (I'm working alone) 
+    * I spent about 6 hours on Design for Milestone 1
+    * Our team met for 2 hours
 * 5-minute Video Demo
-    * I may record a video later but am skipping it for now
+    * Video is linked as a txt in the Design markdown file
 

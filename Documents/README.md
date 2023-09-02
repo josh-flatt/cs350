@@ -17,3 +17,43 @@ with technology.
     * [Design](Milestone-1/Design/Index.md)
     * [Code](Milestone-1/Code/Index.md)
     * [Test](Milestone-1/Test/Index.md)
+
+### Project Notes - Setting up a development environment - Evan Duffield
+
+1. Clone the repository
+
+2. Create a python virtual environment
+
+'''
+python3 -m venv venv
+
+// Windows
+
+python -m venv venv
+'''
+
+3. Enter the python virtual environment
+
+'''
+source ./venv/bin/activate
+
+// Windows
+
+source .\venv\bin\activate.bat
+'''
+
+4. Install Django
+
+'''
+pip install django
+'''
+
+5. Run app
+
+'''
+python3 manage.py runserver
+
+// Windows
+
+python manage.py runserver
+'''
