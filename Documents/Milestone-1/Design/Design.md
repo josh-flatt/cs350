@@ -31,7 +31,7 @@ After consulting my team on what development tools they would want to use, I dec
 ### Status Video 
 
 I created a summary of the design work completed.  View the video at 
-[Milestone 1 - Design](Video.md)
+[Milestone 1 - Design](https://drive.google.com/file/d/1qB_mOfO97vQsMKR0SiupPaAHoNlcKVfm/view?usp=sharing)
 
 
 ## What I will do for Milestone 2
