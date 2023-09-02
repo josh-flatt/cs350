@@ -24,36 +24,36 @@ with technology.
 
 2. Create a python virtual environment
 
-'''
+```
 python3 -m venv venv
 
 // Windows
 
 python -m venv venv
-'''
+```
 
 3. Enter the python virtual environment
 
-'''
+```
 source ./venv/bin/activate
 
 // Windows
 
 source .\venv\bin\activate.bat
-'''
+```
 
 4. Install Django
 
-'''
+```
 pip install django
-'''
+```
 
 5. Run app
 
-'''
+```
 python3 manage.py runserver
 
 // Windows
 
 python manage.py runserver
-'''
+```
