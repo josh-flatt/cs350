@@ -2,7 +2,7 @@
 
 ## Milestone 1 - Test - Mark Seaman
 
-*Introduction:
+Introduction:
 During Milestone 1, my team, "Bridge Out," embarked on a series of activities to lay the foundation for our project, which is akin to a LinkedIn-style platform. In this report, I will outline the key actions and decisions made during this phase, as well as our plans for the upcoming Milestone 2.
 
 Accomplishments:
