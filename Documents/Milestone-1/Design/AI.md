@@ -1,6 +1,18 @@
-# AI Learning
+# AI Learning - Evan Duffield
 
 Things I learned from ChatGPT
+
+Prompts I asked:
+
+1. Contrast using postgresql and mongodb for a static website
+
+2. Explain how github actions can be used to push a code branch into an active aws ec2 instance
+
+3. Explain jinja in the context of Django
+
+4. How easy is it to combine js with django templates using jinja?
+
+Mark's example prompts below...
 
 ## What are the most popular web development tools?
 
