@@ -70,3 +70,66 @@ with each milestone exposing every student to every mindset that required of eng
 Specific outcomes will be delivered by each student.  Assignments will be at the beginning of each
 milestone so that everyone can work toward the expected result. Each milestone will end by
 assessing the work for every team member.
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Project Manager</th>
+<th>Designer</th>
+<th>Programmer</th>
+<th>QA Engineer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Milestone 1</strong></td>
+<td>Project Charter</td>
+<td>Technology Selection</td>
+<td>Version Control</td>
+<td>Test Plan</td>
+</tr>
+<tr>
+<td><strong>Milestone 2</strong></td>
+<td>Setup Communications</td>
+<td>Software Architecture</td>
+<td>Test-Driven Development Workflow</td>
+<td>Test Infrastructure</td>
+</tr>
+<tr>
+<td><strong>Milestone 3</strong></td>
+<td>Functional Requirements</td>
+<td>Component Design - API</td>
+<td>Incremental Development (Sprints)</td>
+<td>Automated Testing</td>
+</tr>
+<tr>
+<td><strong>Milestone 4</strong></td>
+<td>Team Coordinator</td>
+<td>Refactoring and Code Structure</td>
+<td>Write Code - Core Features</td>
+<td>Continuous Integration</td>
+</tr>
+<tr>
+<td><strong>Milestone 5</strong></td>
+<td>Project Progress</td>
+<td>Help with Code</td>
+<td>Write Code - Functional Complete</td>
+<td>Acceptance Testing</td>
+</tr>
+<tr>
+<td><strong>Milestone 6</strong></td>
+<td>Issues Review</td>
+<td>Resolve Open Design Issues</td>
+<td>Write Code - Debug</td>
+<td>Issue Tracking</td>
+</tr>
+<tr>
+<td><strong>Milestone 7</strong></td>
+<td>First Maintenance Roll</td>
+<td>Design Future Enhancements</td>
+<td>Write Code - Fix Issues</td>
+<td>Software Release</td>
+</tr>
+</tbody>
+</table>
