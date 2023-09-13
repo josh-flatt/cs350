@@ -22,7 +22,40 @@ with technology.
 
 1. Clone the repository
 
-2. Create a python virtual environment
+2. Install Python, Docker
+
+3. Docker setup
+
+Build the container after making source changes:
+
+```
+sudo docker build -t bridgeout .
+```
+
+Run the server:
+
+```
+sudo docker run -d -p 8000:8000 bridgeout
+```
+
+Navigate to:
+
+```
+http://localhost:8000/
+```
+
+View container tags, kill server:
+
+```
+sudo docker stats
+
+sudo docker kill "Container name"
+
+```
+
+4. Dockerless - Python virtual environment
+
+Create the virtual environment:
 
 ```
 python3 -m venv venv
@@ -32,7 +65,7 @@ python3 -m venv venv
 python -m venv venv
 ```
 
-3. Enter the python virtual environment
+Enter the virtual environment:
 
 ```
 source ./venv/bin/activate
@@ -42,13 +75,13 @@ source ./venv/bin/activate
 source .\venv\bin\activate.bat
 ```
 
-4. Install Django
+Install requirements:
 
 ```
-pip install django
+pip install -r requirements.txt
 ```
 
-5. Run app
+Run app:
 
 ```
 python3 manage.py runserver
