@@ -11,11 +11,11 @@
 
 3. Status Update Video
     
-	TODO: I created a summary of the design work completed. View the video at [BridgeOut - Status Update Video]()
+	I created a summary of the design work completed. View the video at [BridgeOut - Status Update Video](https://drive.google.com/file/d/1m4KnDCn2WjSdBVeFHTjasHYwrEvVM002/view?usp=sharing)
 
 ## Engineering Investment
 
-I spent about 4 hours on Requirements for Milestone 2.
+I spent about 3 hours on Design for Milestone 2.
 Our team met for a total of about 2 hours this week.
 
 ## What I will do for Milestone 3
@@ -28,4 +28,4 @@ For Milestone 3, I will move to the position of programmer/coder.
 
 ## Concerns and Challenges
 
-I have started, but I still need to learn a lot more about Django.
+I have started, but I still need to learn a lot more about Django. I am concerned about how we will display lots of different data in one view to give a dynamic feel to the app. Some animation javascript will likely be wanted or things will seem too static.

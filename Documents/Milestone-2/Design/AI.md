@@ -268,7 +268,7 @@ Testing the functionality and performance of a LinkedIn-like website is crucial 
 ### Documentation
 - Document all test cases, test results, and issues discovered during testing. This documentation is valuable for tracking progress and facilitating communication among the development and testing teams.
 
-## Continuous Improvement
+### Continuous Improvement
 - Continuously gather feedback from users and incorporate it into your testing and development processes to improve the website over time.
 
 By following these strategies and conducting thorough testing at every stage of development, you can increase the likelihood of delivering a robust, secure, and high-performance LinkedIn-like website.
