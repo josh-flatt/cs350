@@ -22,7 +22,7 @@ A basic Testing.py script was also created to assure methods were passing test c
 ### Status Video 
 
 I created a summary of the code work completed.  View the video at 
-[Milestone 2 - Code](https://drive.google.com/file/d/1qB_mOfO97vQsMKR0SiupPaAHoNlcKVfm/view?usp=sharing)
+[Milestone 2 - Code](https://drive.google.com/file/d/1LXRsAofR0VVSqFwLMK_SfsdjCU4iK3fS/view?usp=sharing)
 
 
 ## What I will do for Milestone 3
