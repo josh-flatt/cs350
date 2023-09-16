@@ -1,4 +1,4 @@
-# Requirements - Ryan Lunas
+# Design - Ryan Lunas
 
 ## Software Architecture - BridgeOut
 * [Software Architecture](Architecture.md)

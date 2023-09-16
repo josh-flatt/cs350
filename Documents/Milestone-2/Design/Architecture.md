@@ -1,6 +1,6 @@
 # Software Architecture
 
-These are likely more than we will implement, but it should give a good idea of what kinds of data we expect.
+These are likely more entities and attributes than we will implement, but it should give a good idea of what kinds of data we expect to see in the app.
 
 ## Data
 
@@ -18,7 +18,7 @@ These are likely more than we will implement, but it should give a good idea of 
 	   - accountCreationDate
 	   - lastLoginDate
 	   Relationships:
-		Many-to-Many with User (Connections/Friends) - Represented by a "Connection" entity that stores the relationship between users.
+		Many-to-Many with User (Connections/Friends) - Represented by a "Connection" entity.
 		One-to-Many with Experience.
 		One-to-Many with Education.
 		One-to-Many with Skill.
@@ -34,60 +34,60 @@ These are likely more than we will implement, but it should give a good idea of 
 	   - connectionType
 	- experience
 	   - experienceID
-	   - UserID
-	   - Title
-	   - Company
-	   - Location
-	   - EmploymentType
-	   - StartDate
-	   - EndDate
-	   - Description
+	   - userID
+	   - title
+	   - company
+	   - location
+	   - employmentType
+	   - startDate
+	   - endDate
+	   - description
 	- education
-	   - EducationID
-	   - UserID
-	   - School
-	   - Degree
-	   - FieldOfStudy
-	   - GraduationDate
-	   - Activities
-	   - Description
+	   - educationID
+	   - userID
+	   - school
+	   - degree
+	   - fieldOfStudy
+	   - graduationDate
+	   - activities
+	   - description
 	- skill
-	   - SkillID
-	   - UserID
-	   - SkillName
-	   - SkillLevel
-	   - EndorsementCount
+	   - skillID
+	   - userID
+	   - skillName
+	   - skillLevel
+	   - endorsementCount
 	- post
-	   - PostID
-	   - UserID
-	   - Content
-	   - Timestamp
-	   - Likes
-	   - Comments
-	   - Shares
+	   - postID
+	   - userID
+	   - content
+	   - timestamp
+	   - likes
+	   - comments
+	   - shares
 	- company
-	   - CompanyID
-	   - Name
-	   - Industry
-	   - Size
-	   - Location
-	   - Description
-	   - FoundedYear
-	   - Website
+	   - companyID
+	   - name
+	   - industry
+	   - size
+	   - location
+	   - description
+	   - foundedYear
+	   - website
 	- group
-	   - GroupID
-	   - Name
-	   - Description
-	   - MemberCount
-	   - CreatedByUserID
-	   - CreatedDate
+	   - groupID
+	   - name
+	   - description
+	   - memberCount
+	   - createdByUserID
+	   - createdDate
 	- message
-	   - MessageID
-	   - SenderUserID
-	   - ReceiverUserID
-	   - Content
-	   - Timestamp
-	   - IsRead
+	   - messageID
+	   - senderUserID
+	   - receiverUserID
+	   - content
+	   - timestamp
+	   - isRead
 
 
 ## Views
@@ -104,4 +104,4 @@ These are likely more than we will implement, but it should give a good idea of 
 
 ## Tests
 
-We will develop tests for each of the functions listed in the views.
+We will develop automated tests for each of the CRUD functions listed in the views section. We will also develop automatic tests for any other utility functions that are required.
