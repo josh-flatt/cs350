@@ -1,12 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Application",
-    "\\Application\\apps\\helloapp",
-    "\\Application\\apps\\helloapp\\migrations",
-    "\\Application\\apps\\helloapp\\templates",
-    "\\Documents\\Milestone-1"
+    "\\Documents",
+    "\\Documents\\Misc-Docs"
   ],
-  "SelectedNode": "\\Application",
+  "SelectedNode": "\\Documents\\Misc-Docs\\Milestones.md",
   "PreviewInSolutionExplorer": false
 }
