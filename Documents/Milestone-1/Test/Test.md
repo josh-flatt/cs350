@@ -10,7 +10,7 @@ Configured the server environment to run Django.
 Deployed the initial build onto Digital Ocean's App Platform.
 
 # Bridge Out Hosting
-["Bridge Out"](https://www.youtube.com/watch?v=djpTabod96w&t=13s)]
+["Bridge Out"(https://www.youtube.com/watch?v=djpTabod96w&t=13s)]
 Status Video
 I created a summary of the test and deployment work, including the server setup. View the video at Milestone 1 - Test.
 
