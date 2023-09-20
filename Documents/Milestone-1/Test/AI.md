@@ -30,14 +30,37 @@ A DigitalOcean account.
 The doctl command-line tool, if you prefer using the CLI (optional).
 DigitalOcean CLI and API tokens configured, if you're using doctl.
 Steps to Deploy Django App on DigitalOcean's App Platform
+
 Step 1: Login to DigitalOcean and Create a New App
 Log into your DigitalOcean account and navigate to the "Apps" section.
 Click "Create App" to initiate the setup.
+
 Step 2: Choose Source Repository
 Link your GitHub, GitLab, or Bitbucket account.
 Choose the repository where your Django app resides.
+
 Step 3: Configure the App
 In the "App Spec", choose the environment as Python.
 Configure the build and run environment (you may need to specify a Dockerfile if your setup is complex).
 
-...  Response Omitted ...
+Here is a sample Dockerfile you could use:
+# Use an official Python runtime as a parent image
+FROM python:3.8-slim-buster
+
+# Set environment variables
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+
+# Set work directory
+WORKDIR /app
+
+# Install dependencies
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
+
+# Copy the current directory contents into the container at /app/
+COPY . /app/
+
+# Run start script
+CMD ["gunicorn", "myproject.wsgi:application", "--bind", "0.0.0.0:8000"]
+
