@@ -1,23 +1,28 @@
 
 ## **Milestone 2: Product Features**
 
-### **Phase 1 - Minimum Viable Product (MVP)**
+### **Phase 1: Minimum Viable Product (MVP)**
 
-Given the urgency to complete the project by the end of the class and the limited hours that can be invested, the primary focus should be on establishing core functionality.
+**Context:**
+Given the urgent need to wrap up by the course's end and the constrained investment of time, we'll prioritize core functionalities.
 
-1. **Hosted Mobile Web App**: Ensure that the app is accessible via mobile browsers.
+**Key Features:**
+
+1. **Web App Accessible on Mobile**:
+   - Primary aim: Easy access through mobile browsers.
    
-2. **User Account and Profile Creation**: 
-    * Create Profile
-    * Add Experience
-    * Add Skills
-    * Add Education
+2. **User Profiles**:
+   - Profile setup
+   - Recording of Experience
+   - Skills documentation
+   - Education entry
 
-3. **Networking**:
-    * Connect With Other Users
-    * Follow Other Users
+3. **Community and Networking**:
+   - Building connections with peers
+   - Option to follow user profiles
 
-4. **Content Creation and Viewing**: 
-    * Create/Delete Posts (Text, Images, Video)
-    * View Posts
-    * Personalized Homepage Feed (Based on Follows/Connections)
+4. **Content Handling**:
+   - Options to generate or remove posts (supports Text, Images, Video)
+   - Viewing capability for posts
+   - Tailored homepage showcasing content influenced by user interactions
+
