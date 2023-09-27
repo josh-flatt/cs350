@@ -1,21 +1,33 @@
-# Phase 2 - Future Enhancements
+### **Phase 2 - Future Enhancements**
+
 These features can be considered for future development after the MVP has been successfully launched and tested:
-1.	Events:
-•	Create/Delete Events
-•	Join/Leave Events
-•	Event Reminders
-2.	Premium Features:
-•	Premium Subscription Service (Boost User/Employer Visibility)
-3.	Advanced User Interaction: This could involve more complex user interactions such as chat functionality, groups or communities, and job posting and application features.
-4.	Notifications: Introduce a notification system for users to get updates on new posts, connections, event reminders, and other pertinent activities.
-5.	Advertiser/Sponsor Integration: Based on the stakeholders' list, there is a mention of advertisers and sponsors. This could involve developing advertising spaces, sponsored posts, or other revenue-generating features for the platform.
-6.	Performance Enhancements: Optimize the web app for faster load times, more efficient data storage and retrieval, etc.
-7.	Integration with Other Platforms: Possible features that allow users to share their BridgeOut activities or posts to other social media platforms or integrate data from other platforms into their BridgeOut profile.
-## Concerns and Challenges for Milestone 2:
-1.	Learning New Technologies: As mentioned, Docker, Django, and AWS could have a learning curve. Consider collaborating with others experienced in these techs or allocating dedicated learning hours.
-2.	Design Consistency: Since you're moving to the position of the designer, ensuring a consistent UI/UX across the application is essential.
-3.	Data Integrity: With the beginning of data modeling and creating ERDs, ensuring data integrity and security will be vital.
-4.	Meeting Deadlines: The project has a strict time constraint. Properly pacing the development, dedicating time blocks, and possibly setting up agile sprints might help manage time effectively.
-5.	Feedback Iteration: Given that client communication is scheduled every two weeks, incorporating feedback while balancing development can be challenging. It might be beneficial to prioritize feedback items based on their impact on the MVP.
 
+1. **Events**: 
+    * Create/Delete Events
+    * Join/Leave Events
+    * Event Reminders
 
+2. **Premium Features**: 
+    * Premium Subscription Service (Boost User/Employer Visibility)
+
+3. **Advanced User Interaction**: This could involve more complex user interactions such as chat functionality, groups or communities, and job posting and application features.
+
+4. **Notifications**: Introduce a notification system for users to get updates on new posts, connections, event reminders, and other pertinent activities.
+
+5. **Advertiser/Sponsor Integration**: Based on the stakeholders' list, there is a mention of advertisers and sponsors. This could involve developing advertising spaces, sponsored posts, or other revenue-generating features for the platform.
+
+6. **Performance Enhancements**: Optimize the web app for faster load times, more efficient data storage and retrieval, etc.
+
+7. **Integration with Other Platforms**: Possible features that allow users to share their BridgeOut activities or posts to other social media platforms or integrate data from other platforms into their BridgeOut profile.
+
+### **Concerns and Challenges for Milestone 2**:
+
+1. **Learning New Technologies**: As mentioned, Docker, Django, and AWS could have a learning curve. Consider collaborating with others experienced in these techs or allocating dedicated learning hours.
+
+2. **Design Consistency**: Since you're moving to the position of the designer, ensuring a consistent UI/UX across the application is essential.
+
+3. **Data Integrity**: With the beginning of data modeling and creating ERDs, ensuring data integrity and security will be vital.
+
+4. **Meeting Deadlines**: The project has a strict time constraint. Properly pacing the development, dedicating time blocks, and possibly setting up agile sprints might help manage time effectively.
+
+5. **Feedback Iteration**: Given that client communication is scheduled every two weeks, incorporating feedback while balancing development can be challenging. It might be beneficial to prioritize feedback items based on their impact on the MVP.
