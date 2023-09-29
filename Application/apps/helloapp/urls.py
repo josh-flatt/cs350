@@ -21,4 +21,5 @@ import apps.helloapp.views_functions as vf
 
 urlpatterns = [
     path("", vf.helloView, name="hello_view"),
+    path('user/<int:user_id>', vf.user_profile, name='user_profile'),
 ]

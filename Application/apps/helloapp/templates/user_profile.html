@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Profile</title>
+</head>
+<body>
+    <h2>{{ user.firstName }} {{ user.lastName }}</h2>
+    <p>Email: {{ user.email }}</p>
+    <p>Birth Date: {{ user.birthDate }}</p>
+    <p>Location: {{ user.location }}</p>
+
+    <h2>Experiences</h2>
+    <ul>
+        {% for experience in experiences %}
+        <li>{{ experience.title }} at {{ experience.company }}</li>
+        <p>{{ experience.description }}</p>
+        {% endfor %}
+    </ul>
+
+    <h2>Educations</h2>
+    <ul>
+        {% for education in educations %}
+        <li>{{ education.degree }} in {{ education.fieldOfStudy }} at {{ education.school }}</li>
+        <p>{{ education.description }}</p>
+        {% endfor %}
+    </ul>
+
+    <h2>Skills</h2>
+    <ul>
+        {% for skill in skills %}
+        <li>{{ skill.skillName }} ({{ skill.skillLevel }})</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
