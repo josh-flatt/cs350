@@ -1,0 +1,30 @@
+alerts:
+- rule: DEPLOYMENT_FAILED
+- rule: DOMAIN_FAILED
+features:
+- buildpack-stack=ubuntu-22
+ingress:
+  rules:
+  - component:
+      name: bridge-out
+    match:
+      path:
+        prefix: /
+name: plankton-app
+region: nyc
+services:
+- environment_slug: python
+  envs:
+  - key: DISABLE_COLLECTSTATIC
+    scope: RUN_AND_BUILD_TIME
+    value: "1"
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: josh-flatt/cs350
+  http_port: 8080
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: bridge-out
+  run_command: gunicorn --worker-tmp-dir /dev/shm BridgeOut.wsgi
+  source_dir: Application

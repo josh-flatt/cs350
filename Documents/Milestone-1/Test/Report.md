@@ -1,6 +1,6 @@
 # Engineering Report
 
-## Milestone 1 - Test - Mark Seaman
+## Milestone 1 - Test - Kyle Longaker
 
 Introduction:
 During Milestone 1, my team, "Bridge Out," embarked on a series of activities to lay the foundation for our project, which is akin to a LinkedIn-style platform. In this report, I will outline the key actions and decisions made during this phase, as well as our plans for the upcoming Milestone 2.
@@ -33,7 +33,7 @@ Engineering Investment:
 During Milestone 1, I dedicated approximately 10 hours to these tasks. As our team, "Bridge Out," is currently comprised of just myself, we did not have any formal team meetings.
 
 5-Minute Video Demo:
-While I may consider recording a video demo in the future, I have opted to skip this step for now, focusing on project development and milestone objectives.
-
+[Here is a video that I posted on Youtube
+](https://www.youtube.com/watch?v=djpTabod96w)
 In summary, Milestone 1 saw the establishment of our team, critical decisions regarding technology stack, successful server setup, and collaborative code deployment. Looking ahead to Milestone 2, we aim to further enhance our project and overcome challenges as we progress toward our goals.
 

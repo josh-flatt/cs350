@@ -84,52 +84,52 @@ assessing the work for every team member.
 <tbody>
 <tr>
 <td><strong>Milestone 1</strong></td>
-<td>Project Charter</td>
-<td>Technology Selection</td>
-<td>Version Control</td>
-<td>Test Plan</td>
+<td>(R) Project Charter</td>
+<td>(E) Technology Selection</td>
+<td>(J) Version Control</td>
+<td>(K) Test Plan</td>
 </tr>
 <tr>
 <td><strong>Milestone 2</strong></td>
-<td>Setup Communications</td>
-<td>Software Architecture</td>
-<td>Test-Driven Development Workflow</td>
-<td>Test Infrastructure</td>
+<td>(K) Setup Communications</td>
+<td>(R) Software Architecture</td>
+<td>(E) Test-Driven Development Workflow</td>
+<td>(J) Test Infrastructure</td>
 </tr>
 <tr>
 <td><strong>Milestone 3</strong></td>
-<td>Functional Requirements</td>
-<td>Component Design - API</td>
-<td>Incremental Development (Sprints)</td>
-<td>Automated Testing</td>
+<td>(J) Functional Requirements</td>
+<td>(K) Component Design - API</td>
+<td>(R) Incremental Development (Sprints)</td>
+<td>(E) Automated Testing</td>
 </tr>
 <tr>
 <td><strong>Milestone 4</strong></td>
-<td>Team Coordinator</td>
-<td>Refactoring and Code Structure</td>
-<td>Write Code - Core Features</td>
-<td>Continuous Integration</td>
+<td>(E) Team Coordinator</td>
+<td>(J) Refactoring and Code Structure</td>
+<td>(K) Write Code - Core Features</td>
+<td>(R) Continuous Integration</td>
 </tr>
 <tr>
 <td><strong>Milestone 5</strong></td>
-<td>Project Progress</td>
-<td>Help with Code</td>
-<td>Write Code - Functional Complete</td>
-<td>Acceptance Testing</td>
+<td>(R) Project Progress</td>
+<td>(E) Help with Code</td>
+<td>(J) Write Code - Functional Complete</td>
+<td>(K) Acceptance Testing</td>
 </tr>
 <tr>
 <td><strong>Milestone 6</strong></td>
-<td>Issues Review</td>
-<td>Resolve Open Design Issues</td>
-<td>Write Code - Debug</td>
-<td>Issue Tracking</td>
+<td>(K) Issues Review</td>
+<td>(R) Resolve Open Design Issues</td>
+<td>(E) Write Code - Debug</td>
+<td>(J) Issue Tracking</td>
 </tr>
 <tr>
 <td><strong>Milestone 7</strong></td>
-<td>First Maintenance Roll</td>
-<td>Design Future Enhancements</td>
-<td>Write Code - Fix Issues</td>
-<td>Software Release</td>
+<td>(J) First Maintenance Roll</td>
+<td>(K) Design Future Enhancements</td>
+<td>(R) Write Code - Fix Issues</td>
+<td>(E) Software Release</td>
 </tr>
 </tbody>
 </table>
