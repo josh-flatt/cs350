@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404
-from .models import User
+from .models import AppUser
 
 # Create your views here.
 
@@ -7,7 +7,7 @@ def helloView(request):
     return render(request, "helloView.html")
 
 def user_profile(request, user_id):
-    user = get_object_or_404(User, pk=user_id)
+    user = get_object_or_404(AppUser, pk=user_id)
 
     # You can fetch related data like experiences, education, skills, etc.
     experiences = user.experience_set.all()
