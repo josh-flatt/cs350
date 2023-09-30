@@ -20,7 +20,10 @@ import apps.helloapp.views_classes as vc
 import apps.helloapp.views_functions as vf
 
 urlpatterns = [
-    path("admin/", admin.site.urls),
     path("", vf.helloView, name="hello_view"),
-    path('user/<int:user_id>', vf.user_profile, name='user_profile'),
+    path('user/',                vc.UserListView.as_view(),    name='user_list'),
+    path('user/<int:pk>',        vc.UserDetailView.as_view(),  name='user_detail'),
+    path('user/add',             vc.UserCreateView.as_view(),  name='user_add'),
+    path('user/<int:pk>/',       vc.UserUpdateView.as_view(),  name='user_edit'),
+    path('user/<int:pk>/delete', vc.UserDeleteView.as_view(),  name='user_delete'),
 ]

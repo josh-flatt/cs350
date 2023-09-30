@@ -1,12 +1,15 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Documents",
-    "\\Documents\\Milestone-1",
+    "\\Application",
+    "\\Application\\apps",
+    "\\Application\\apps\\helloapp",
+    "\\Application\\BridgeOut",
+    "\\Application\\static",
+    "\\Application\\static\\profileImages",
     "\\Documents\\Milestone-1\\Requirements",
-    "\\Documents\\Milestone-2",
     "\\Documents\\Milestone-2\\Design"
   ],
-  "SelectedNode": "\\Documents\\Milestone-2\\Design\\StatusReport.md",
+  "SelectedNode": "\\Application\\apps\\helloapp\\views_functions.py",
   "PreviewInSolutionExplorer": false
 }

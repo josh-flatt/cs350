@@ -1,14 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>User Profile</title>
-</head>
-<body>
+{% extends 'theme.html' %}
+
+
+{% block title %}
+User Details
+{% endblock title %}
+
+
+{% block content %}
+
+<div>
     <h2>{{ user.firstName }} {{ user.lastName }}</h2>
     <p>Email: {{ user.email }}</p>
     <p>Birth Date: {{ user.birthDate }}</p>
     <p>Location: {{ user.location }}</p>
-    <p>Profile Image: <img src="{{ user.profilePicture }}" /></p>
+    <p>Profile Image: <img src="{{ user.profilePicture }}" height="150" /></p>
 
     <h2>Experiences</h2>
     <ul>
@@ -18,7 +23,7 @@
         {% endfor %}
     </ul>
 
-    <h2>Educations</h2>
+    <h2>Education</h2>
     <ul>
         {% for education in educations %}
         <li>{{ education.degree }} in {{ education.fieldOfStudy }} at {{ education.school }}</li>
@@ -32,5 +37,11 @@
         <li>{{ skill.skillName }} ({{ skill.skillLevel }})</li>
         {% endfor %}
     </ul>
-</body>
-</html>
+
+    <p>
+        <a href="/helloapp/user/{{ user.pk }}/delete" class="btn btn-success m-5">Remove User</a>
+    </p>
+
+</div>
+
+{% endblock content %}
