@@ -4,12 +4,11 @@
     "\\Application",
     "\\Application\\apps",
     "\\Application\\apps\\helloapp",
-    "\\Application\\BridgeOut",
-    "\\Application\\static",
-    "\\Application\\static\\profileImages",
-    "\\Documents\\Milestone-1\\Requirements",
-    "\\Documents\\Milestone-2\\Design"
+    "\\Application\\apps\\helloapp\\migrations",
+    "\\Application\\apps\\helloapp\\templates",
+    "\\Application\\apps\\helloapp\\templates\\user",
+    "\\Application\\BridgeOut"
   ],
-  "SelectedNode": "\\Application\\apps\\helloapp\\views_functions.py",
+  "SelectedNode": "\\Application\\apps\\helloapp\\templates\\user",
   "PreviewInSolutionExplorer": false
 }
