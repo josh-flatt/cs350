@@ -12,7 +12,8 @@ Edit User
     {% load crispy_forms_tags %}
 
 
-    <form action="" method="post">{% csrf_token %}
+    <form action="" method="post">
+        {% csrf_token %}
 
         {{ form|crispy }}
 
@@ -20,6 +21,11 @@ Edit User
         <a class="btn btn-success m-5" href="delete">Delete Record</a>
 
     </form>
+
+    <p>
+        <a href="/helloapp/user" class="btn btn-success m-5">User List</a>
+    </p>
+
 </div>
 
 {% endblock content %}

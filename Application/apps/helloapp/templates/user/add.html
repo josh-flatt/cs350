@@ -12,13 +12,19 @@ Add New User
     {% load crispy_forms_tags %}
 
 
-    <form action="" method="post">{% csrf_token %}
+    <form action="" method="post">
+        {% csrf_token %}
 
         {{ form|crispy }}
 
         <button class="btn btn-success m-5" type="submit">Save Record</button>
 
     </form>
+
+    <p>
+        <a href="/helloapp/user" class="btn btn-success m-5">User List</a>
+    </p>
+
 </div>
 
 {% endblock content %}

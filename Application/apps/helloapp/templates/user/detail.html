@@ -39,7 +39,13 @@ User Details
     </ul>
 
     <p>
-        <a href="/helloapp/user/{{ user.pk }}/delete" class="btn btn-success m-5">Remove User</a>
+        <a href="/helloapp/user/{{ user.pk }}/" class="btn btn-success m-5">Edit User</a>
+
+        <a href="/helloapp/user/{{ user.pk }}/delete" class="btn btn-danger m-5">Remove User</a>
+    </p>
+
+    <p>
+        <a href="/helloapp/user" class="btn btn-success m-5">User List</a>
     </p>
 
 </div>

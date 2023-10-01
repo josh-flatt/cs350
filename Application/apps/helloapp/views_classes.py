@@ -27,6 +27,7 @@ class UserUpdateView(UpdateView):
     template_name = "user/edit.html"
     model = AppUser
     fields = ['userName', 'firstName', 'lastName', 'email', 'birthDate', 'location', 'profilePicture']
+    success_url = reverse_lazy('user_list')
 
 
 class UserDeleteView(DeleteView):
