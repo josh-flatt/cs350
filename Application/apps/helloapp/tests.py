@@ -1,6 +1,7 @@
 from django.test import TestCase
+import datetime
 
-from helloapp.models import AppUser
+from .models import AppUser
 
 class AppUserModelTestCase(TestCase):
     def setUp(self):
@@ -26,7 +27,7 @@ class AppUserModelTestCase(TestCase):
         self.assertEqual(saved_user.firstName, 'John')
         self.assertEqual(saved_user.lastName, 'Doe')
         self.assertEqual(saved_user.email, 'test@example.com')
-        self.assertEqual(saved_user.birthDate, '1990-01-01')
+        self.assertEqual(saved_user.birthDate, datetime.date(1990, 1, 1))
         self.assertEqual(saved_user.location, 'Test Location')
         self.assertEqual(saved_user.profilePicture, 'profile.jpg')
         self.assertFalse(saved_user.isLoggedIn)

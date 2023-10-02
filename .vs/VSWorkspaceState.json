@@ -3,12 +3,8 @@
     "",
     "\\Application",
     "\\Application\\apps",
-    "\\Application\\apps\\helloapp",
-    "\\Application\\apps\\helloapp\\migrations",
-    "\\Application\\apps\\helloapp\\templates",
-    "\\Application\\apps\\helloapp\\templates\\user",
-    "\\Application\\BridgeOut"
+    "\\Application\\apps\\helloapp"
   ],
-  "SelectedNode": "\\Application\\apps\\helloapp\\templates\\helloView.html",
+  "SelectedNode": "\\Application\\apps\\helloapp\\__init__.py",
   "PreviewInSolutionExplorer": false
 }
