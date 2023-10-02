@@ -9,6 +9,6 @@
     "\\Application\\apps\\helloapp\\templates\\user",
     "\\Application\\BridgeOut"
   ],
-  "SelectedNode": "\\Application\\apps\\helloapp\\templates\\user",
+  "SelectedNode": "\\Application\\apps\\helloapp\\templates\\helloView.html",
   "PreviewInSolutionExplorer": false
 }
