@@ -1,6 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Application",
+    "\\Application\\BridgeOut",
+    "\\Application\\helloapp",
+    "\\Application\\static",
+    "\\Application\\templates"
   ],
   "PreviewInSolutionExplorer": false
 }
