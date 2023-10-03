@@ -11,7 +11,7 @@
 * What did I do?
 * Engineering investment
 * What will I do?
-* 5-minute Staus Video
+* 5-minute Status Video
 * What challenges do I have?
     
 ## [AI Playbook](AI.md)
