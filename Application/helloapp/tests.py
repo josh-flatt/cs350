@@ -29,7 +29,7 @@ class AppUserModelTestCase(TestCase):
         self.assertEqual(saved_user.email, 'test@example.com')
         self.assertEqual(saved_user.birthDate, datetime.date(1990, 1, 1))
         self.assertEqual(saved_user.location, 'Test Location')
-        self.assertEqual(saved_user.profilePicture, 'profile.jpg')
+        self.assertEqual(saved_user.profilePicture, '/static/profileImages/robot.jpg')
         self.assertFalse(saved_user.isLoggedIn)
 
     def test_user_str_representation(self):

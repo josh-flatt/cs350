@@ -12,12 +12,17 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+# Import for apps dir fix
+import sys
 # import env_variables as ve
-import apps.helloapp
+import helloapp
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+# Fix for apps subdirectory
+# NEW: Add apps directory to Python file path
+PROJECT_ROOT = os.path.dirname(__file__)
+sys.path.insert(0, os.path.join(PROJECT_ROOT, "apps"))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
@@ -48,7 +53,7 @@ INSTALLED_APPS = [
     "crispy_forms",
     "crispy_bootstrap4",
     # Apps
-    "apps.helloapp",
+    "helloapp",
 ]
 
 MIDDLEWARE = [

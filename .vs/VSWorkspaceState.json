@@ -1,10 +1,6 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Application",
-    "\\Application\\apps",
-    "\\Application\\apps\\helloapp"
+    ""
   ],
-  "SelectedNode": "\\Application\\apps\\helloapp\\__init__.py",
   "PreviewInSolutionExplorer": false
 }
