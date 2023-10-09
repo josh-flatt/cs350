@@ -1,4 +1,4 @@
-Of course! Here's a new addition for Milestone 3:
+ Here's a new addition for Milestone 3:
 
 **Prompt:**
 "Our team is focusing on the scalability and performance aspects of our LinkedIn-like website. Can you provide insights on strategies to ensure our platform can handle a growing user base and maintain optimal performance?"
