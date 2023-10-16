@@ -4,7 +4,7 @@
     * View testing implemented using test-driven development videos.
     * 20 Unit tests to check database viability, errors.
     * These were implemented in tests.py under the UserTests, DatabaseUnitTests, and UserViewTests.
-    * Script written "sourcetest.py" to assure a production environment has at least 50% of the the code from development.
+    * Script written "sourcetest.py" to assure a production environment has at least 50% of the the code from tests.py.
 * What will I do?  Design for Milestone 4
     * Create a timeline for the rest of the semester's project.
 * What challenges do I have?
@@ -19,7 +19,7 @@
 
 # AI Prompts
 
-- Write a python script that compares two python project directories. If the source files are more than 50% identical to eachother, write to console "PASS" alongside the filename and directory.
+- write a python script that reads through a project directory. If the number of lines in a file named tests.py is at least 50% of the lines out of every source file in the project, return true.
 
 - Write a python script that checks a locally hosted Django server, and sees if a view properly loads based on if the conditionals of the html template load content.
 

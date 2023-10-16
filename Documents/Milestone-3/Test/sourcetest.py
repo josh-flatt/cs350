@@ -1,51 +1,49 @@
 '''
     Checks to see if a production repository has 
-    at least 50% of code from a given development 
-    branch.
+    at least 50% of code from tests.py
     Usage:
 
         python3 sourcetest.py /prod/ /dev/
 
 '''
 
-import filecmp
-import difflib
-import os
+
 import sys
 
-def compare_directories(directory1, directory2):
-    directory_comparison = filecmp.dircmp(directory1, directory2)
+import os
+import glob
 
-    for common_file in directory_comparison.common_files:
-        file1 = os.path.join(directory1, common_file)
-        file2 = os.path.join(directory2, common_file)
+def count_lines_in_file(file_path):
+    with open(file_path, 'r') as file:
+        return len(file.readlines())
 
-        if filecmp.cmp(file1, file2):
-            print(f"PASS: {common_file} (Identical)")
-        else:
-            similarity = compare_files(file1, file2)
-            if similarity > 0.5:
-                print(f"PASS: {common_file} (Similarity: {similarity * 100:.2f}%)")
+def main(project_directory):
+    source_file_count = 0
+    source_file_lines = 0
 
-def compare_files(file1, file2):
-    with open(file1, 'r') as f1, open(file2, 'r') as f2:
-        text1 = f1.read()
-        text2 = f2.read()
+    for root, dirs, files in os.walk(project_directory):
+        for file in files:
+            if file.endswith(".py"):
+                source_file_count += 1
+                source_file_lines += count_lines_in_file(os.path.join(root, file))
 
-    d = difflib.Differ()
-    text1_lines = text1.splitlines()
-    text2_lines = text2.splitlines()
+    tests_file = os.path.join(project_directory, 'tests.py')
 
-    # Calculate the similarity ratio
-    sm = difflib.SequenceMatcher(None, text1_lines, text2_lines)
-    return sm.ratio()
+    if source_file_count == 0:
+        return False  # No source files in the project
+
+    if not os.path.exists(tests_file):
+        return False  # No tests.py file in the project
+
+    tests_lines = count_lines_in_file(tests_file)
+
+    return tests_lines >= 0.5 * (source_file_lines / source_file_count)
 
 if __name__ == "__main__":
-    if len(sys.argv) != 3:
-        print("Error, usage is: python3 sourcetest.py /prod/ /dev/")
+    if len(sys.argv) != 2:
+        print("Error, usage is: python3 sourcetest.py /prod/")
         sys.exit(1)
 
-    dir1 = sys.argv[1]
-    dir2 = sys.argv[2]
-
-    compare_directories(dir1, dir2)
+    dirName = sys.argv[1]
+    result = main(dirName)
+    print(result)
