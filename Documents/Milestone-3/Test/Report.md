@@ -13,7 +13,7 @@
     * I spent about 5 hours on Testing for Milestone 3
     * Our team met for 2 hours
 * 5-minute Video Demo
-    * [Milestone 3 - Testing](link here)
+    * [Milestone 3 - Testing](https://drive.google.com/file/d/1XDYXUjUdqtnc1rQ2JAQFrsHMweOpj_QZ/view?usp=sharing)
 
 
 
