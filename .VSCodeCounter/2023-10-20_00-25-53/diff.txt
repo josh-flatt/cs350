@@ -1,0 +1,55 @@
+Date : 2023-10-20 00:25:53
+Directory : c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp
+Total : 22 files,  338 codes, -39 comments, 77 blanks, all 376 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Python   |         14 |        209 |        -39 |          4 |        174 |
+| HTML     |          7 |        159 |          0 |         74 |        233 |
+| YAML     |          1 |        -30 |          0 |         -1 |        -31 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                         | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                            |         22 |        338 |        -39 |         77 |        376 |
+| . (Files)                                                                                    |          7 |        165 |         27 |         39 |        231 |
+| ..                                                                                           |          6 |       -124 |        -67 |        -44 |       -235 |
+| ..\BridgeOut                                                                                 |          6 |       -124 |        -67 |        -44 |       -235 |
+| migrations                                                                                   |          2 |        138 |          1 |          8 |        147 |
+| templates                                                                                    |          7 |        159 |          0 |         74 |        233 |
+| templates (Files)                                                                            |          2 |         45 |          0 |         15 |         60 |
+| templates\user                                                                               |          5 |        114 |          0 |         59 |        173 |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                                     | language | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\__init__.py               | Python   |          0 |          0 |         -1 |         -1 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\app.yaml                  | YAML     |        -30 |          0 |         -1 |        -31 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\asgi.py                   | Python   |         -4 |         -8 |         -5 |        -17 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\settings.py               | Python   |        -78 |        -35 |        -30 |       -143 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\urls.py                   | Python   |         -8 |        -16 |         -2 |        -26 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\wsgi.py                   | Python   |         -4 |         -8 |         -5 |        -17 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\__init__.py                | Python   |          0 |          0 |          1 |          1 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\admin.py                   | Python   |         12 |          0 |          1 |         13 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\apps.py                    | Python   |          4 |          0 |          3 |          7 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\migrations\0001_initial.py | Python   |        138 |          1 |          7 |        146 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\migrations\__init__.py     | Python   |          0 |          0 |          1 |          1 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\models.py                  | Python   |        103 |         10 |         21 |        134 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\helloView.html   | HTML     |         17 |          0 |          7 |         24 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\theme.html       | HTML     |         28 |          0 |          8 |         36 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\add.html    | HTML     |         17 |          0 |         13 |         30 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\delete.html | HTML     |         16 |          0 |          8 |         24 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\detail.html | HTML     |         40 |          0 |         13 |         53 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\edit.html   | HTML     |         18 |          0 |         13 |         31 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\list.html   | HTML     |         23 |          0 |         12 |         35 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\urls.py                    | Python   |         12 |         16 |          2 |         30 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\views_classes.py           | Python   |         27 |          0 |          9 |         36 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\views_functions.py         | Python   |          7 |          1 |          2 |         10 |
+| Total                                                                                        |          |        338 |        -39 |         77 |        376 |
++----------------------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

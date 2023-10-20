@@ -1,0 +1,64 @@
+Date : 2023-10-20 00:24:40
+Directory : c:\Users\rylun\source\repos\josh-flatt\cs350\Application\static
+Total : 26 files,  -625 codes, -106 comments, -179 blanks, all -910 lines
+
+Languages
++------------------+------------+------------+------------+------------+------------+
+| language         | files      | code       | comment    | blank      | total      |
++------------------+------------+------------+------------+------------+------------+
+| JSON             |          1 |         -1 |          0 |          0 |         -1 |
+| Docker           |          1 |         -9 |         -8 |         -8 |        -25 |
+| pip requirements |          1 |        -14 |          0 |         -1 |        -15 |
+| YAML             |          1 |        -30 |          0 |         -1 |        -31 |
+| HTML             |          7 |       -159 |          0 |        -74 |       -233 |
+| Python           |         15 |       -412 |        -98 |        -95 |       -605 |
++------------------+------------+------------+------------+------------+------------+
+
+Directories
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                                         | files      | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                                            |         26 |       -625 |       -106 |       -179 |       -910 |
+| ..                                                                                           |         26 |       -625 |       -106 |       -179 |       -910 |
+| .. (Files)                                                                                   |          4 |        -39 |        -11 |        -14 |        -64 |
+| ..\BridgeOut                                                                                 |          6 |       -124 |        -67 |        -44 |       -235 |
+| ..\helloapp                                                                                  |         16 |       -462 |        -28 |       -121 |       -611 |
+| ..\helloapp (Files)                                                                          |          7 |       -165 |        -27 |        -39 |       -231 |
+| ..\helloapp\migrations                                                                       |          2 |       -138 |         -1 |         -8 |       -147 |
+| ..\helloapp\templates                                                                        |          7 |       -159 |          0 |        -74 |       -233 |
+| ..\helloapp\templates (Files)                                                                |          2 |        -45 |          0 |        -15 |        -60 |
+| ..\helloapp\templates\user                                                                   |          5 |       -114 |          0 |        -59 |       -173 |
++----------------------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++----------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| filename                                                                                     | language         | code       | comment    | blank      | total      |
++----------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\__init__.py               | Python           |          0 |          0 |         -1 |         -1 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\app.yaml                  | YAML             |        -30 |          0 |         -1 |        -31 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\asgi.py                   | Python           |         -4 |         -8 |         -5 |        -17 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\settings.py               | Python           |        -78 |        -35 |        -30 |       -143 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\urls.py                   | Python           |         -8 |        -16 |         -2 |        -26 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\wsgi.py                   | Python           |         -4 |         -8 |         -5 |        -17 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\Dockerfile                          | Docker           |         -9 |         -8 |         -8 |        -25 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\database.json                       | JSON             |         -1 |          0 |          0 |         -1 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\__init__.py                | Python           |          0 |          0 |         -1 |         -1 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\admin.py                   | Python           |        -12 |          0 |         -1 |        -13 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\apps.py                    | Python           |         -4 |          0 |         -3 |         -7 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\migrations\0001_initial.py | Python           |       -138 |         -1 |         -7 |       -146 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\migrations\__init__.py     | Python           |          0 |          0 |         -1 |         -1 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\models.py                  | Python           |       -103 |        -10 |        -21 |       -134 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\helloView.html   | HTML             |        -17 |          0 |         -7 |        -24 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\theme.html       | HTML             |        -28 |          0 |         -8 |        -36 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\add.html    | HTML             |        -17 |          0 |        -13 |        -30 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\delete.html | HTML             |        -16 |          0 |         -8 |        -24 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\detail.html | HTML             |        -40 |          0 |        -13 |        -53 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\edit.html   | HTML             |        -18 |          0 |        -13 |        -31 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\list.html   | HTML             |        -23 |          0 |        -12 |        -35 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\urls.py                    | Python           |        -12 |        -16 |         -2 |        -30 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\views_classes.py           | Python           |        -27 |          0 |         -9 |        -36 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\views_functions.py         | Python           |         -7 |         -1 |         -2 |        -10 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\manage.py                           | Python           |        -15 |         -3 |         -5 |        -23 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\requirements.txt                    | pip requirements |        -14 |          0 |         -1 |        -15 |
+| Total                                                                                        |                  |       -625 |       -106 |       -179 |       -910 |
++----------------------------------------------------------------------------------------------+------------------+------------+------------+------------+------------+

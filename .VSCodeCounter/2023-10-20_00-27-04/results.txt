@@ -1,0 +1,31 @@
+Date : 2023-10-20 00:27:04
+Directory : c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut
+Total : 6 files,  124 codes, 67 comments, 44 blanks, all 235 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Python   |          5 |         94 |         67 |         43 |        204 |
+| YAML     |          1 |         30 |          0 |          1 |         31 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                                           | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                              |          6 |        124 |         67 |         44 |        235 |
++--------------------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                                                       | language | code       | comment    | blank      | total      |
++--------------------------------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\__init__.py | Python   |          0 |          0 |          1 |          1 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\app.yaml    | YAML     |         30 |          0 |          1 |         31 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\asgi.py     | Python   |          4 |          8 |          5 |         17 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\settings.py | Python   |         78 |         35 |         30 |        143 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\urls.py     | Python   |          8 |         16 |          2 |         26 |
+| c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\wsgi.py     | Python   |          4 |          8 |          5 |         17 |
+| Total                                                                          |          |        124 |         67 |         44 |        235 |
++--------------------------------------------------------------------------------+----------+------------+------------+------------+------------+

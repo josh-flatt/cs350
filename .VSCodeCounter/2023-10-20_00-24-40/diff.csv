@@ -1,0 +1,28 @@
+"filename", "language", "Python", "YAML", "pip requirements", "HTML", "Docker", "JSON", "comment", "blank", "total"
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\__init__.py", "Python", 0, 0, 0, 0, 0, 0, 0, -1, -1
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\app.yaml", "YAML", 0, -30, 0, 0, 0, 0, 0, -1, -31
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\asgi.py", "Python", -4, 0, 0, 0, 0, 0, -8, -5, -17
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\settings.py", "Python", -78, 0, 0, 0, 0, 0, -35, -30, -143
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\urls.py", "Python", -8, 0, 0, 0, 0, 0, -16, -2, -26
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\wsgi.py", "Python", -4, 0, 0, 0, 0, 0, -8, -5, -17
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\Dockerfile", "Docker", 0, 0, 0, 0, -9, 0, -8, -8, -25
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\database.json", "JSON", 0, 0, 0, 0, 0, -1, 0, 0, -1
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\__init__.py", "Python", 0, 0, 0, 0, 0, 0, 0, -1, -1
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\admin.py", "Python", -12, 0, 0, 0, 0, 0, 0, -1, -13
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\apps.py", "Python", -4, 0, 0, 0, 0, 0, 0, -3, -7
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\migrations\0001_initial.py", "Python", -138, 0, 0, 0, 0, 0, -1, -7, -146
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\migrations\__init__.py", "Python", 0, 0, 0, 0, 0, 0, 0, -1, -1
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\models.py", "Python", -103, 0, 0, 0, 0, 0, -10, -21, -134
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\helloView.html", "HTML", 0, 0, 0, -17, 0, 0, 0, -7, -24
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\theme.html", "HTML", 0, 0, 0, -28, 0, 0, 0, -8, -36
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\add.html", "HTML", 0, 0, 0, -17, 0, 0, 0, -13, -30
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\delete.html", "HTML", 0, 0, 0, -16, 0, 0, 0, -8, -24
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\detail.html", "HTML", 0, 0, 0, -40, 0, 0, 0, -13, -53
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\edit.html", "HTML", 0, 0, 0, -18, 0, 0, 0, -13, -31
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\templates\user\list.html", "HTML", 0, 0, 0, -23, 0, 0, 0, -12, -35
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\urls.py", "Python", -12, 0, 0, 0, 0, 0, -16, -2, -30
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\views_classes.py", "Python", -27, 0, 0, 0, 0, 0, 0, -9, -36
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\helloapp\views_functions.py", "Python", -7, 0, 0, 0, 0, 0, -1, -2, -10
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\manage.py", "Python", -15, 0, 0, 0, 0, 0, -3, -5, -23
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\requirements.txt", "pip requirements", 0, 0, -14, 0, 0, 0, 0, -1, -15
+"Total", "-", -412, -30, -14, -159, -9, -1, -106, -179, -910

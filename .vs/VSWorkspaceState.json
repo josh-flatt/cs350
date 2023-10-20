@@ -2,10 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\Application",
-    "\\Application\\BridgeOut",
     "\\Application\\helloapp",
-    "\\Application\\static",
-    "\\Application\\templates"
+    "\\Documents",
+    "\\Documents\\Milestone-1\\Requirements",
+    "\\Documents\\Milestone-2\\Design",
+    "\\Documents\\Milestone-3\\Code",
+    "\\Documents\\Milestone-4",
+    "\\Documents\\Milestone-4\\Test"
   ],
+  "SelectedNode": "\\Application\\helloapp",
   "PreviewInSolutionExplorer": false
 }

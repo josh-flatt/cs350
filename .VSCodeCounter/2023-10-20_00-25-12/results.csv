@@ -1,0 +1,8 @@
+"filename", "language", "Python", "YAML", "comment", "blank", "total"
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\__init__.py", "Python", 0, 0, 0, 1, 1
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\app.yaml", "YAML", 0, 30, 0, 1, 31
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\asgi.py", "Python", 4, 0, 8, 5, 17
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\settings.py", "Python", 78, 0, 35, 30, 143
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\urls.py", "Python", 8, 0, 16, 2, 26
+"c:\Users\rylun\source\repos\josh-flatt\cs350\Application\BridgeOut\wsgi.py", "Python", 4, 0, 8, 5, 17
+"Total", "-", 94, 30, 67, 44, 235

@@ -188,7 +188,7 @@ class DatabaseUnitTests(TestCase):
         created_user = AppUser.objects.get(userName='user3')
         self.assertIsNotNone(created_user)
         self.assertEqual(created_user.userName, 'user3')
-        self.assertEqual(created_user.email, 'user3@example.com')
+        self.assertEqual(created_user.email, 'eva@example.com')
 
     def test_CreateUser4(self):
         user_data = {
@@ -273,7 +273,7 @@ class DatabaseUnitTests(TestCase):
         created_user = AppUser.objects.get(userName='user7')
         self.assertIsNotNone(created_user)
         self.assertEqual(created_user.userName, 'user7')
-        self.assertEqual(created_user.email, 'user7@example.com')
+        self.assertEqual(created_user.email, 'sophia@example.com')
 
     def test_CreateUser8(self):
         user_data = {
@@ -378,7 +378,7 @@ class DatabaseUnitTests(TestCase):
         created_user = AppUser.objects.get(userName='user12')
         self.assertIsNotNone(created_user)
         self.assertEqual(created_user.userName, 'user12')
-        self.assertEqual(created_user.email, 'user12@example.com')
+        self.assertEqual(created_user.email, 'james@example.com')
 
     def test_CreateUser13(self):
         user_data = {
@@ -442,7 +442,7 @@ class DatabaseUnitTests(TestCase):
         created_user = AppUser.objects.get(userName='user15')
         self.assertIsNotNone(created_user)
         self.assertEqual(created_user.userName, 'user15')
-        self.assertEqual(created_user.email, 'user15@example.com')
+        self.assertEqual(created_user.email, 'ava@example.com')
 
     def test_CreateUser16(self):
         user_data = {
@@ -549,29 +549,46 @@ class DatabaseUnitTests(TestCase):
         created_user = AppUser.objects.get(userName='user20')
         self.assertIsNotNone(created_user)
         self.assertEqual(created_user.userName, 'user20')
-        self.assertEqual(created_user.email, 'user20@example.com')
+        self.assertEqual(created_user.email, 'unique@example.com')
 
 class UserViewTests(TestCase):
+    def setUp(self):
+        self.user = AppUser.objects.create(
+            userName='testuser',
+            firstName='John',
+            lastName='Doe',
+            email='test@example.com',
+            birthDate='1990-01-01',
+            location='Test Location',
+            profilePicture='/static/profileImages/robot.jpg',
+            isLoggedIn=False,
+        )
+
     def test_HelloPage(self):
-        response = self.client.get("helloapp/")
-        self.assertEqual(response.status_code, 200)
+        response = self.client.get("")
+        self.assertEqual(response.status_code, 302)
 
     def test_UserListView(self):
-        response = self.client.get("user/list.html")
+        response = self.client.get(reverse('user_list'))
         self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'user/list.html')
 
     def test_UserDetailView(self):
-        response = self.client.get("user/detail.html")
+        response = self.client.get(reverse('user_detail', args=[str(self.user.pk)]))
         self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'user/detail.html')
 
     def test_UserCreateView(self):
-        response = self.client.get("user/add.html")
+        response = self.client.get(reverse('user_add'))
         self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'user/add.html')
 
     def test_UserUpdateView(self):
-        response = self.client.get("user/edit.html")
+        response = self.client.get(reverse('user_edit', args=[str(self.user.pk)]))
         self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'user/edit.html')
 
     def test_UserDeleteView(self):
-        response = self.client.get("user/delete.html")
+        response = self.client.get(reverse('user_delete', args=[str(self.user.pk)]))
         self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, 'user/delete.html')
