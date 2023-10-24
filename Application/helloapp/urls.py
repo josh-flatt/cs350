@@ -14,16 +14,25 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from django.contrib import admin
 from django.urls import path
 import helloapp.views_classes as vc
 import helloapp.views_functions as vf
+from django.urls import path, include
+from django.views.generic import RedirectView
 
 urlpatterns = [
-    path("", vf.helloView, name="hello_view"),
+    path('', vf.helloView, name="hello_view"),
+
+    
+    path('user/home',            vc.UserHomeView.as_view(),    name='user_home'),
     path('user/',                vc.UserListView.as_view(),    name='user_list'),
     path('user/<int:pk>',        vc.UserDetailView.as_view(),  name='user_detail'),
-    path('user/add',             vc.UserCreateView.as_view(),  name='user_add'),
-    path('user/<int:pk>/',       vc.UserUpdateView.as_view(),  name='user_edit'),
+    path('user/add',             vc.UserAddView.as_view(),  name='user_add'),
     path('user/<int:pk>/delete', vc.UserDeleteView.as_view(),  name='user_delete'),
+
+    path('profile/home',            vc.ProfileHomeView.as_view(),    name='profile_home'),
+    path('profile/',                vc.ProfileListView.as_view(),    name='profile_list'),
+    path('profile/<int:pk>',        vc.ProfileDetailView.as_view(),  name='profile_detail'),
+    path('profile/<int:pk>/',        vc.ProfileUpdateView.as_view(),  name='profile_edit'),
+    
 ]

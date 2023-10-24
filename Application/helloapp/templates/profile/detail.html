@@ -1,0 +1,44 @@
+{% extends 'theme.html' %}
+
+
+{% block title %}
+Profile
+{% endblock title %}
+
+
+{% block content %}
+
+<div>
+    <h2>Overview</h2>
+    <p>Name: {{ object.firstName }} {{ object.lastName }}</p>
+    <p>Email: {{ object.email }}</p>
+    <p>Birth Date: {{ object.birthDate }}</p>
+    <p>Location: {{ object.location }}</p>
+    <p>Profile Image: <img src="{{ object.profilePicture }}" height="150" /></p>
+
+    <h2>Experiences</h2>
+    <ul>
+        {% for experience in experiences %}
+        <li>{{ experience.title }} at {{ experience.company }}</li>
+        <p>{{ experience.description }}</p>
+        {% endfor %}
+    </ul>
+
+    <h2>Education</h2>
+    <ul>
+        {% for education in educations %}
+        <li>{{ education.degree }} in {{ education.fieldOfStudy }} at {{ education.school }}</li>
+        <p>{{ education.description }}</p>
+        {% endfor %}
+    </ul>
+
+    <h2>Skills</h2>
+    <ul>
+        {% for skill in skills %}
+        <li>{{ skill.skillName }} ({{ skill.skillLevel }})</li>
+        {% endfor %}
+    </ul>
+
+</div>
+
+{% endblock content %}

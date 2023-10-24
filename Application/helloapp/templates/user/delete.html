@@ -11,13 +11,9 @@ Delete User
 
     <form action="" method="post">
         {% csrf_token %}
-        <p>Are you sure you want to delete "{{ object.firstName }} {{ object.lastName }}"?</p>
+        <p>Are you sure you want to delete "{{ user.username }}"?</p>
         <input type="submit" value="Confirm">
     </form>
-
-    <p>
-        <a href="/helloapp/user" class="btn btn-success m-5">User List</a>
-    </p>
 
 </div>
 

@@ -2,7 +2,7 @@
 
 
 {% block title %}
-List of Users
+List of Profiles
 {% endblock title %}
 
 
@@ -14,19 +14,18 @@ List of Users
 
         <table class="table table-hover">
             <tr>
-                <th>User</th>
+                <th>Profile</th>
             </tr>
 
-            {% for appuser in object_list %}
+            {% for profile in object_list %}
             <tr>
-                <td><a href="/helloapp/user/{{ appuser.pk }}">{{ appuser.user.username }}</a></td>
+                <td><a href="/helloapp/profile/{{ profile.pk }}">{{ profile.firstName }} {{ profile.lastName }}</a></td>
             </tr>
             {% endfor %}
 
         </table>
 
     </div>
-
 </div>
 
 {% endblock content %}

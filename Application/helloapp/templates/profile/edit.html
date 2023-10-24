@@ -1,7 +1,7 @@
 {% extends 'theme.html' %}
 
 {% block title %}
-Edit User
+Edit Profile
 {% endblock title %}
 
 
@@ -18,13 +18,8 @@ Edit User
         {{ form|crispy }}
 
         <button class="btn btn-success m-5" type="submit">Save Record</button>
-        <a class="btn btn-success m-5" href="delete">Delete Record</a>
 
     </form>
-
-    <p>
-        <a href="/helloapp/user" class="btn btn-success m-5">User List</a>
-    </p>
 
 </div>
 

@@ -2,50 +2,26 @@
 
 
 {% block title %}
-User Details
+Account Details
 {% endblock title %}
 
 
 {% block content %}
 
 <div>
-    <h2>{{ user.firstName }} {{ user.lastName }}</h2>
-    <p>Email: {{ user.email }}</p>
-    <p>Birth Date: {{ user.birthDate }}</p>
-    <p>Location: {{ user.location }}</p>
-    <p>Profile Image: <img src="{{ user.profilePicture }}" height="150" /></p>
-
-    <h2>Experiences</h2>
-    <ul>
-        {% for experience in experiences %}
-        <li>{{ experience.title }} at {{ experience.company }}</li>
-        <p>{{ experience.description }}</p>
-        {% endfor %}
-    </ul>
-
-    <h2>Education</h2>
-    <ul>
-        {% for education in educations %}
-        <li>{{ education.degree }} in {{ education.fieldOfStudy }} at {{ education.school }}</li>
-        <p>{{ education.description }}</p>
-        {% endfor %}
-    </ul>
-
-    <h2>Skills</h2>
-    <ul>
-        {% for skill in skills %}
-        <li>{{ skill.skillName }} ({{ skill.skillLevel }})</li>
-        {% endfor %}
-    </ul>
+    <h2>{{ object.user.username }}</h2>
+    <p>Account Creation Date: {{ object.accountCreationDate }}</p>
 
     <p>
-        <a href="/helloapp/user/{{ user.pk }}/" class="btn btn-success m-5">Edit User</a>
+        <a href="/helloapp/profile/home" class="btn btn-success m-5">View Profile</a>
 
-        <a href="/helloapp/user/{{ user.pk }}/delete" class="btn btn-danger m-5">Remove User</a>
+        <a href="/helloapp/profile/{{ object.pk }}/" class="btn btn-success m-5">Edit Profile</a>
+
+        <a href="{% url 'password_change' %}" class="btn btn-success m-5">Change Password</a>
     </p>
 
     <p>
-        <a href="/helloapp/user" class="btn btn-success m-5">User List</a>
+        <a href="/helloapp/user/{{ object.user.pk }}/delete" class="btn btn-danger m-5">Remove User</a>
     </p>
 
 </div>

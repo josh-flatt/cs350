@@ -1,36 +1,80 @@
 from django.db import models
+from django.contrib.auth.models import User
+from django.urls import reverse_lazy
 
 class AppUser(models.Model):
-    userID = models.AutoField(primary_key=True)
-    userName = models.CharField(max_length=100)
-    firstName = models.CharField(max_length=50)
-    lastName = models.CharField(max_length=50)
-    email = models.EmailField(unique=True)
-    birthDate = models.DateField()
-    location = models.CharField(max_length=100)
-    profilePicture = models.CharField(max_length=100)
-    isLoggedIn = models.BooleanField(default=False)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, editable=False)
+
     accountCreationDate = models.DateTimeField(auto_now_add=True)
-    lastLoginDate = models.DateTimeField(auto_now=True)
 
     # Should these connections all be symmetrical?
-    userConnections = models.ManyToManyField('self', through='UserConnection', symmetrical=True)
-    userGroupConnections = models.ManyToManyField('self', through='UserGroupConnection', symmetrical=True)
-    # Add other one-to-many relationships as needed
-    # One-to-Many with Experience
-    # One-to-Many with Education
-    # One-to-Many with Skill
+    userConnections = models.ManyToManyField('self', through='UserConnection', symmetrical=True, editable=False)
+    userGroupConnections = models.ManyToManyField('self', through='UserGroupConnection', symmetrical=True, editable=False)
+
     # One-to-Many with Post
     # One-to-Many with Message
-    # One-to-Many with Company
-    # Many-to-Many with Group
 
     def __str__(self):
-        return self.userName
+        return f'{self.user.username}'
+    
+    def get_absolute_url(self):
+        return reverse_lazy('user_detail', args=[str(self.id)])
+    
+    @property
+    def name(self):
+        return self.user.first_name + ' ' + self.user.last_name
+    
+    @property
+    def posts(self):
+        return Post.objects.filter(author=self)
+    
+    @staticmethod
+    def get_me(user):
+        return AppUser.objects.get_or_create(user=user)[0]
+    
+    def save(self,*args,**kwargs):
+        created = not self.pk
+        super().save(*args,**kwargs)
+        if created:
+            Profile.objects.create(appuser=self)
+
+class Profile(models.Model):
+    appuser = models.OneToOneField(AppUser, on_delete=models.CASCADE, related_name='appuser', editable=False)
+
+    firstName = models.CharField(max_length=50, null=True)
+    lastName = models.CharField(max_length=50, null=True)
+    birthDate = models.DateField(null=True)
+    location = models.CharField(max_length=150, null=True)
+    email = models.CharField(max_length=200, null=True)
+    profilePicture = models.CharField(max_length=200, null=True)
+    
+    # Add other one-to-many relationships as needed
+    # Add in foreign key fields on the many side and define property here
+    # One-to-Many with Education
+    # One-to-Many with Skill
+
+    # One-to-Many with Company
+
+    def __str__(self):
+        return f'Profile of {self.appuser.user.username}'
+    
+    def get_absolute_url(self):
+        return reverse_lazy('profile_detail', args=[str(self.id)])
+    
+    @property
+    def name(self):
+        return 'Profile of ' + self.appuser
+    
+    @property
+    def experiences(self):
+        return Experience.objects.filter(author=self)
+    
+    @staticmethod
+    def get_me(appuser):
+        return Profile.objects.get_or_create(appuser=appuser)[0]
 
 # Should Companies connect with Users through groups?
 class UserGroup(models.Model):
-    userGroupID = models.AutoField(primary_key=True)
     name = models.CharField(max_length=100)
     description = models.TextField()
     memberCount = models.PositiveIntegerField()
@@ -61,8 +105,7 @@ class UserGroupConnection(models.Model):
         return f"Connection between {self.userID} and {self.userGroupID}"
 
 class Experience(models.Model):
-    experienceID = models.AutoField(primary_key=True)
-    userID = models.ForeignKey(AppUser, on_delete=models.CASCADE)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
     title = models.CharField(max_length=100)
     company = models.CharField(max_length=100)
     location = models.CharField(max_length=100)
@@ -99,7 +142,7 @@ class Skill(models.Model):
 
 class Post(models.Model):
     postID = models.AutoField(primary_key=True)
-    userID = models.ForeignKey(AppUser, on_delete=models.CASCADE)
+    appuser = models.ForeignKey(AppUser, on_delete=models.CASCADE)
     content = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
     likes = models.PositiveIntegerField(default=0)
@@ -107,7 +150,7 @@ class Post(models.Model):
     shares = models.PositiveIntegerField(default=0)
 
     def __str__(self):
-        return f"Post by {self.userID}: {self.content[:50]}"
+        return f"Post by {self.appuser}: {self.content[:50]}"
 
 class Company(models.Model):
     companyID = models.AutoField(primary_key=True)

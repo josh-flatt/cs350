@@ -14,9 +14,9 @@
 
 <body class=" bg-dark text-light">
 
-    <header class="bg-primary p-5 mb-5">
-        <h1>BridgeOut</h1>
-    </header>
+    {% block navbar %}
+    {% include 'navbar.html' %}
+    {% endblock navbar %}
 
     <div class="container m-5">
         <div class="card bg-light text-dark p-5">
