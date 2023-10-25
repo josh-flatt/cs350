@@ -9,33 +9,38 @@ Profile
 {% block content %}
 
 <div>
+    <img src="{{ object.profilePicture }}" height="150" />
     <h2>Overview</h2>
     <p>Name: {{ object.firstName }} {{ object.lastName }}</p>
     <p>Email: {{ object.email }}</p>
     <p>Birth Date: {{ object.birthDate }}</p>
     <p>Location: {{ object.location }}</p>
-    <p>Profile Image: <img src="{{ object.profilePicture }}" height="150" /></p>
 
-    <h2>Experiences</h2>
+    <h2>Experience</h2>
     <ul>
-        {% for experience in experiences %}
-        <li>{{ experience.title }} at {{ experience.company }}</li>
-        <p>{{ experience.description }}</p>
+        {% for experience in object.experiences %}
+        <li>{{experience.employmentType}} {{ experience.title }} at {{ experience.company }}</li>
+        <p>Location: {{ experience.location }}</p>
+        <p>Dates: {{ experience.startDate }} - {{ experience.endDate }}</p>
+        <p>Desciption: {{ experience.description }}</p>
         {% endfor %}
     </ul>
 
     <h2>Education</h2>
     <ul>
-        {% for education in educations %}
+        {% for education in object.educations %}
         <li>{{ education.degree }} in {{ education.fieldOfStudy }} at {{ education.school }}</li>
-        <p>{{ education.description }}</p>
+        <p>Graduated: {{ education.graduationDate }}</p>
+        <p>Activities: {{ education.activities }}</p>
+        <p>Description: {{ education.description }}</p>
         {% endfor %}
     </ul>
 
     <h2>Skills</h2>
     <ul>
-        {% for skill in skills %}
+        {% for skill in object.skills %}
         <li>{{ skill.skillName }} ({{ skill.skillLevel }})</li>
+        <p>Endorsement Count: {{ skill.endorsementCount }}</p>
         {% endfor %}
     </ul>
 

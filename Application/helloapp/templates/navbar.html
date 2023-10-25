@@ -6,9 +6,6 @@
 
         <ul class="navbar-nav text-light ml-auto">
             <li class="nav-item">
-                <a class="nav-link text-light" href="{% url 'user_list' %}">Users</a>
-            </li>
-            <li class="nav-item">
                 <a class="nav-link text-light" href="{% url 'profile_list' %}">Profiles</a>
             </li>
             {% if user.is_authenticated %}

@@ -19,7 +19,7 @@ List of Profiles
 
             {% for profile in object_list %}
             <tr>
-                <td><a href="/helloapp/profile/{{ profile.pk }}">{{ profile.firstName }} {{ profile.lastName }}</a></td>
+                <td><a href="/helloapp/profile/{{ profile.pk }}">{{ profile.appuser.user.username }}'s Profile</a></td>
             </tr>
             {% endfor %}
 

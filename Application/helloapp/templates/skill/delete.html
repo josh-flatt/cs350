@@ -1,0 +1,20 @@
+{% extends 'theme.html' %}
+
+{% block title %}
+Delete Experience
+{% endblock title %}
+
+
+{% block content %}
+
+<div class="container m-5">
+
+    <form action="" method="post">
+        {% csrf_token %}
+        <p>Are you sure you want to delete "{{ skill.title }}"?</p>
+        <input type="submit" value="Confirm">
+    </form>
+
+</div>
+
+{% endblock content %}

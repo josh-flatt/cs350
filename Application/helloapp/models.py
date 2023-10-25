@@ -67,7 +67,15 @@ class Profile(models.Model):
     
     @property
     def experiences(self):
-        return Experience.objects.filter(author=self)
+        return Experience.objects.filter(profile=self)
+    
+    @property
+    def educations(self):
+        return Education.objects.filter(profile=self)
+    
+    @property
+    def skills(self):
+        return Skill.objects.filter(profile=self)
     
     @staticmethod
     def get_me(appuser):
@@ -105,11 +113,12 @@ class UserGroupConnection(models.Model):
         return f"Connection between {self.userID} and {self.userGroupID}"
 
 class Experience(models.Model):
-    profile = models.ForeignKey(Profile, on_delete=models.CASCADE)
-    title = models.CharField(max_length=100)
-    company = models.CharField(max_length=100)
-    location = models.CharField(max_length=100)
-    employmentType = models.CharField(max_length=50)
+    experienceID = models.AutoField(primary_key=True)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, editable=False)
+    title = models.CharField(max_length=200)
+    company = models.CharField(max_length=200)
+    location = models.CharField(max_length=200)
+    employmentType = models.CharField(max_length=100)
     startDate = models.DateField()
     endDate = models.DateField(null=True, blank=True)
     description = models.TextField()
@@ -119,10 +128,10 @@ class Experience(models.Model):
 
 class Education(models.Model):
     educationID = models.AutoField(primary_key=True)
-    userID = models.ForeignKey(AppUser, on_delete=models.CASCADE)
-    school = models.CharField(max_length=100)
-    degree = models.CharField(max_length=100)
-    fieldOfStudy = models.CharField(max_length=100)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, editable=False)
+    school = models.CharField(max_length=200)
+    degree = models.CharField(max_length=200)
+    fieldOfStudy = models.CharField(max_length=200)
     graduationDate = models.DateField()
     activities = models.TextField()
     description = models.TextField()
@@ -132,10 +141,10 @@ class Education(models.Model):
 
 class Skill(models.Model):
     skillID = models.AutoField(primary_key=True)
-    userID = models.ForeignKey(AppUser, on_delete=models.CASCADE)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, editable=False)
     skillName = models.CharField(max_length=100)
     skillLevel = models.CharField(max_length=50)
-    endorsementCount = models.PositiveIntegerField()
+    endorsementCount = models.PositiveIntegerField(default=0, editable=False)
 
     def __str__(self):
         return self.skillName

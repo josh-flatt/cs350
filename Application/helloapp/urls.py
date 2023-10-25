@@ -34,5 +34,17 @@ urlpatterns = [
     path('profile/',                vc.ProfileListView.as_view(),    name='profile_list'),
     path('profile/<int:pk>',        vc.ProfileDetailView.as_view(),  name='profile_detail'),
     path('profile/<int:pk>/',        vc.ProfileUpdateView.as_view(),  name='profile_edit'),
+
+    path('experience/add',             vc.ExperienceAddView.as_view(),  name='experience_add'),
+    path('experience/<int:pk>/delete', vc.ExperienceDeleteView.as_view(),  name='experience_delete'),
+    path('experience/<int:pk>/',        vc.ExperienceUpdateView.as_view(),  name='experience_edit'),
+
+    path('education/add',             vc.EducationAddView.as_view(),  name='education_add'),
+    path('education/<int:pk>/delete', vc.EducationDeleteView.as_view(),  name='education_delete'),
+    path('education/<int:pk>/',        vc.EducationUpdateView.as_view(),  name='education_edit'),
+
+    path('skill/add',             vc.SkillAddView.as_view(),  name='skill_add'),
+    path('skill/<int:pk>/delete', vc.SkillDeleteView.as_view(),  name='skill_delete'),
+    path('skill/<int:pk>/',        vc.SkillUpdateView.as_view(),  name='skill_edit'),
     
 ]

@@ -21,6 +21,47 @@ Edit Profile
 
     </form>
 
+    <h2>Experience</h2>
+    <ul>
+        {% for experience in object.experiences %}
+        <li>{{experience.employmentType}} {{ experience.title }} at {{ experience.company }}</li>
+        <p>Location: {{ experience.location }}</p>
+        <p>Dates: {{ experience.startDate }} - {{ experience.endDate }}</p>
+        <p>Desciption: {{ experience.description }}</p>
+        <a href="/helloapp/experience/{{ experience.pk }}/" class="btn btn-success m-5">Edit Experience</a>
+        <a href="/helloapp/experience/{{ experience.pk }}/delete" class="btn btn-danger m-5">Delete Experience</a>
+        {% endfor %}
+        <p><a href="/helloapp/experience/add" class="btn btn-success m-5">Add Experience</a></p>
+    </ul>
+
+    <h2>Education</h2>
+    <ul>
+        {% for education in object.educations %}
+        <li>{{ education.degree }} in {{ education.fieldOfStudy }} at {{ education.school }}</li>
+        <p>Graduated: {{ education.graduationDate }}</p>
+        <p>Activities: {{ education.activities }}</p>
+        <p>Description: {{ education.description }}</p>
+        <a href="/helloapp/education/{{ education.pk }}/" class="btn btn-success m-5">Edit Education</a>
+        <a href="/helloapp/education/{{ education.pk }}/delete" class="btn btn-danger m-5">Delete Experience</a>
+        {% endfor %}
+        <p><a href="/helloapp/education/add" class="btn btn-success m-5">Add Education</a></p>
+    </ul>
+
+    <h2>Skills</h2>
+    <ul>
+        {% for skill in object.skills %}
+        <li>{{ skill.skillName }} ({{ skill.skillLevel }})</li>
+        <p>Endorsement Count: {{ skill.endorsementCount }}</p>
+        <a href="/helloapp/skill/{{ skill.pk }}/" class="btn btn-success m-5">Edit Skill</a>
+        <a href="/helloapp/skill/{{ skill.pk }}/delete" class="btn btn-danger m-5">Delete Skill</a>
+        {% endfor %}
+        <p><a href="/helloapp/skill/add" class="btn btn-success m-5">Add Skill</a></p>
+    </ul>
+
+    
+    
+    
+
 </div>
 
 {% endblock content %}
