@@ -7,6 +7,8 @@ import helloapp.views_functions as vf
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView, RedirectView
 
+# User Views
+
 class UserHomeView(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
         if self.request.user.is_anonymous:
@@ -39,6 +41,8 @@ class UserDeleteView(vf.IsUserRecordMixin, DeleteView):
     template_name = 'user/delete.html'
     success_url = reverse_lazy('profile_list')
 
+# Profile Views
+
 class ProfileHomeView(RedirectView):
     def get_redirect_url(self, *args, **kwargs):
         if self.request.user.is_anonymous:
@@ -61,6 +65,8 @@ class ProfileUpdateView(vf.IsUserRecordMixin, UpdateView):
     fields = '__all__'
     success_url = reverse_lazy('profile_home')
 
+# Experience Views
+
 class ExperienceAddView(LoginRequiredMixin, CreateView):
     template_name = "experience/add.html"
     model = Experience
@@ -82,6 +88,8 @@ class ExperienceUpdateView(vf.IsUserProfileMixin, UpdateView):
     fields = '__all__'
     success_url = reverse_lazy('profile_home')
 
+# Education Views
+
 class EducationAddView(LoginRequiredMixin, CreateView):
     template_name = "education/add.html"
     model = Education
@@ -102,6 +110,8 @@ class EducationUpdateView(vf.IsUserProfileMixin, UpdateView):
     model = Education
     fields = '__all__'
     success_url = reverse_lazy('profile_home')
+
+# Skill Views
 
 class SkillAddView(LoginRequiredMixin, CreateView):
     template_name = "skill/add.html"
