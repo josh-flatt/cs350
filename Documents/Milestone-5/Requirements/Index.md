@@ -1,37 +1,19 @@
-# Test - Ryan Lunas - BridgeOut
-
-# NOT READY FOR GRADING!
-# THIS MILESTONE IS STILL INCOMPLETE AND CONTAINS OLD MARKDOWN CONTENT THAT I USE AS A STRUCTURE TEMPLATE
+# Requirements - Ryan Lunas - BridgeOut
 
 ## [Product Backlog and Burndown Graph](Burndown.md)
-* Setup test framework for automated testing
-* Build data tests for CRUD
-* Build tests for each view
-* Compare lines of test code to lines of product code (should be 50%)
-* Setup tool to measure test coverage
-* Ran unit tests
-* Recorded initial test coverage
-* Wrote more tests until coverage reached 80%
+* Added issues discovered in customer acceptance meeting to backlog
+* Added issues discovered in usability test to product backlog
+* Looked for and found more issues until product backlog had 30 issues
+* Created a hypothetical burndown graph for the work using the most recent pace
 
 ## [Customer Acceptance Meeting](Acceptance.md)
-* Setup test framework for automated testing
-* Build data tests for CRUD
-* Build tests for each view
-* Compare lines of test code to lines of product code (should be 50%)
-* Setup tool to measure test coverage
-* Ran unit tests
-* Recorded initial test coverage
-* Wrote more tests until coverage reached 80%
+* Met with the customer to discover how well we are aligned with requirements
+* Discovered some issues and added them to backlog
+* Got directions to add more issues to the backlog
 
 ## [Usability Test](Usability.md)
-* Setup test framework for automated testing
-* Build data tests for CRUD
-* Build tests for each view
-* Compare lines of test code to lines of product code (should be 50%)
-* Setup tool to measure test coverage
-* Ran unit tests
-* Recorded initial test coverage
-* Wrote more tests until coverage reached 80%
+* Sent Joel the usability test and received the results
+* Added found issues to the product backlog
 
 ## [Engineering Report](StatusReport.md)
 * What did I do?
@@ -42,6 +24,6 @@
     
 ## [AI Playbook](AI.md)
 * What should I ask?
-* Measuring Code Coverage
-* Unit Test Examples
-* Testing Pitfalls
+* Preparing for Customer Meeting
+* Aligning Product Backlog
+* Analyzing Usablity Test Results

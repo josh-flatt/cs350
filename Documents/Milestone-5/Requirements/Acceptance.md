@@ -1,42 +1,8 @@
-# View Tests and Coverage
+# Customer Acceptance Meeting
 
-## Tests For All Data Views
+## BridgeOut Meeting
 
-### Setup test framework for automated testing
-
-The test framework is setup and ready to go using the command "python manage.py test".
-
-### Build data tests for CRUD
-
-All data tests for the CRUD operations of the User model are implemented. Many of these were completed in previous milestones.
-
-### Build tests for each view
-
-Test for each view are implemented. Many of these were completed in previous milestones.
-
-### Compare lines of test code to lines of product code (should be 50%)
-
-There are 577 Lines of test code and 846 lines of other code, so the number of lines of test code is 68% that of product code.
-
-## Measured Test Coverage
-
-### Setup tool to measure test coverage
-
-Coverage.py was setup as the tool to measure coverage. The process is as follows:
-
-1. If coverage is not installed, install, likely using the command "pip install coverage"
-2. Navigate to the Application directory in the terminal.
-3. Run this command to run all tests while measuring coverage. "coverage run --source='.' manage.py test helloapp"
-4. Use the command "coverage report" to view the results.
-
-### Ran unit tests
-
-Ran the initial tests, and found a few failing ones, I repaired each of them so now there are 0 failing tests.
-
-### Recorded initial test coverage
-
-The initial coverage from all previously written tests is 96%.
-
-### Wrote more tests until coverage reached 80%
-
-The total coverage has already surpassed this threshold.
+Professor Seaman seemed fairly happy with the progress of the product but stressed that there is more to be done. He liked how the profiles were shaping up but noted that there was still some core functionality missing
+from the application such as the ability to add connections between users, image uploading, and correct page titles. He directed me to use his feedback, as well as the usability study results, and my own audit to bring
+all currently present issues standing in the way of the 1.0 release into the product backlog. He said he expected there to be about 30-35 issues in the backlog when this process was finished. The other groups are making
+great progress and have implemented some features that are similar to what we're trying to do. It would be of great benefit to examine their repos, and we were encouraged to do so by professor Seaman.
