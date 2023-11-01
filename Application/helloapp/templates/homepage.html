@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BridgeOut - Home</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <!-- Navbar -->
+    {% include 'navbar.html' %}
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Welcome to BridgeOut!</h1>
+            <p>Connecting people and creating opportunities.</p>
+            <a href="{% url 'registration' %}" class="btn-register">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2>Why Choose BridgeOut?</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <h3>Professional Network</h3>
+                    <p>Connect with professionals across various fields.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Learning Opportunities</h3>
+                    <p>Access to courses, webinars, and workshops.</p>
+                </div>
+                <div class="feature-item">
+                    <h3>Career Growth</h3>
+                    <p>Find job opportunities and elevate your career.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 BridgeOut. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
