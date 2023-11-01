@@ -1,0 +1,16 @@
+.toolbar {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.toolbar a {
+    color: white;
+    margin: 0 15px;
+    text-decoration: none;
+}
+
+.toolbar a:hover {
+    text-decoration: underline;
+}
