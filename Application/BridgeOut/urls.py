@@ -21,7 +21,7 @@ Usage:
 
 from django.contrib import admin
 from django.urls import path, include
-from .views_functions import homepage_view
+
 from django.views.generic import RedirectView
 
 urlpatterns = [
@@ -29,6 +29,5 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/profile/', RedirectView.as_view(url='/helloapp/user/home')),
-    path('', homepage_view, name='homepage'),
     path("helloapp/", include("helloapp.urls")),
 ]
