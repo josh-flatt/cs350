@@ -1,11 +1,13 @@
 from django.shortcuts import render
 from django.views import View
-from .models import AppUser, Profile, User, Experience, Education, Skill, Post
+from .models import AppUser, Profile, User, Experience, Education, Skill, Post, Follow
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 import helloapp.views_functions as vf
 from django.urls import reverse_lazy
+from django.shortcuts import get_object_or_404
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView, RedirectView
+from .forms import ProfilePictureForm
 
 # User Views
 
@@ -41,6 +43,46 @@ class UserDeleteView(vf.IsUserRecordMixin, DeleteView):
     template_name = 'user/delete.html'
     success_url = reverse_lazy('profile_list')
 
+# Feed Views
+
+class FeedView(LoginRequiredMixin, ListView):
+    template_name = 'feed.html'  # Replace with your template path
+    context_object_name = 'feed'
+    paginate_by = 20  # Set the number of posts to display per page
+
+    def get_queryset(self):
+        profile = Profile.get_me(AppUser.get_me(self.request.user))
+        following_profiles = Follow.objects.filter(follower=profile).values_list('following', flat=True)
+        feed = Post.objects.filter(profile__in=following_profiles).order_by('-timestamp')
+        return feed
+
+# Follow Views
+
+class FollowAddView(RedirectView):
+    permanent = False
+
+    def get_redirect_url(self, *args, **kwargs):
+        profile_to_follow_id = self.kwargs['pk']
+        profile_to_follow = get_object_or_404(Profile, id=profile_to_follow_id)
+        follower = Profile.get_me(AppUser.get_me(self.request.user))
+
+        follow, created = Follow.objects.get_or_create(follower=follower, following=profile_to_follow)
+        # We can use success and fail url logic to route failed adds later
+        return reverse_lazy('profile_list')
+        
+class FollowDeleteView(RedirectView):
+    permanent = False
+
+    def get_redirect_url(self, *args, **kwargs):
+        profile_to_unfollow_id = self.kwargs['pk']
+        profile_to_unfollow = get_object_or_404(Profile, id=profile_to_unfollow_id)
+        follower = Profile.get_me(AppUser.get_me(self.request.user))
+
+        follow = Follow.objects.get(follower=follower, following=profile_to_unfollow)
+        follow.delete()
+
+        return reverse_lazy('profile_list')
+
 # Profile Views
 
 class ProfileHomeView(RedirectView):
@@ -62,7 +104,14 @@ class ProfileDetailView(DetailView):
 class ProfileUpdateView(vf.IsUserRecordMixin, UpdateView):
     template_name = "profile/edit.html"
     model = Profile
-    fields = '__all__'
+    fields = ('firstName', 'lastName', 'birthDate', 'location', 'email')
+    
+    success_url = reverse_lazy('profile_home')
+
+class ProfilePictureUpdateView(UpdateView):
+    model = Profile
+    form_class = ProfilePictureForm
+    template_name = 'profile/addprofilepic.html'
     success_url = reverse_lazy('profile_home')
 
 # Experience Views

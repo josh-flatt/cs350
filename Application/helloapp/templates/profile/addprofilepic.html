@@ -1,0 +1,16 @@
+{% extends 'theme.html' %}
+
+{% block title %}
+Add Profile Picture
+{% endblock title %}
+
+
+{% block content %}
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Upload Profile Picture</button>
+</form>
+
+{% endblock content %}

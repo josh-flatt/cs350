@@ -19,7 +19,7 @@ class AppUser(models.Model):
     
     def get_absolute_url(self):
         return reverse_lazy('user_detail', args=[str(self.id)])
-    
+
     @property
     def name(self):
         return self.user.first_name + ' ' + self.user.last_name
@@ -35,14 +35,14 @@ class AppUser(models.Model):
             Profile.objects.create(appuser=self)
 
 class Profile(models.Model):
-    appuser = models.OneToOneField(AppUser, on_delete=models.CASCADE, related_name='appuser', editable=False)
+    appuser = models.OneToOneField(AppUser, on_delete=models.CASCADE, editable=False)
 
     firstName = models.CharField(max_length=50, null=True)
     lastName = models.CharField(max_length=50, null=True)
     birthDate = models.DateField(null=True)
     location = models.CharField(max_length=150, null=True)
     email = models.CharField(max_length=200, null=True)
-    profilePicture = models.CharField(max_length=200, null=True)
+    profile_picture = models.ImageField(upload_to='profile_pictures/', null=True, blank=True)
     
     # Add other one-to-many relationships as needed
     # Add in foreign key fields on the many side and define property here
@@ -77,9 +77,36 @@ class Profile(models.Model):
     def skills(self):
         return Skill.objects.filter(profile=self)
     
+    @property
+    def following_profiles(self):
+        """
+        Get the list of profiles that the current profile is following.
+        """
+        follow_objects = Follow.objects.filter(follower=self)
+        return [follow_object.following for follow_object in follow_objects]
+    
+    @property
+    def follower_profiles(self):
+        """
+        Get the list of profiles that are following the current profile.
+        """
+        follow_objects = Follow.objects.filter(following=self)
+        return [follow_object.follower for follow_object in follow_objects]
+
     @staticmethod
     def get_me(appuser):
         return Profile.objects.get_or_create(appuser=appuser)[0]
+
+class Follow(models.Model):
+    follower = models.ForeignKey(Profile, related_name='following', on_delete=models.CASCADE)
+    following = models.ForeignKey(Profile, related_name='followers', on_delete=models.CASCADE)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        unique_together = ('follower', 'following')
+
+    def __str__(self):
+        return f'{self.follower} follows {self.following}'
 
 # Should Companies connect with Users through groups?
 class UserGroup(models.Model):

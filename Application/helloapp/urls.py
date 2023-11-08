@@ -34,6 +34,7 @@ urlpatterns = [
     path('profile/',                vc.ProfileListView.as_view(),    name='profile_list'),
     path('profile/<int:pk>',        vc.ProfileDetailView.as_view(),  name='profile_detail'),
     path('profile/<int:pk>/',        vc.ProfileUpdateView.as_view(),  name='profile_edit'),
+    path('profile/<int:pk>/addpic',        vc.ProfilePictureUpdateView.as_view(),  name='profile_pic_edit'),
 
     path('experience/add',             vc.ExperienceAddView.as_view(),  name='experience_add'),
     path('experience/<int:pk>/delete', vc.ExperienceDeleteView.as_view(),  name='experience_delete'),
@@ -52,4 +53,8 @@ urlpatterns = [
     path('post/<int:pk>/delete', vc.PostDeleteView.as_view(),  name='post_delete'),
     path('post/<int:pk>/',        vc.PostUpdateView.as_view(),  name='post_edit'),
     
+    path('follow/<int:pk>',        vc.FollowAddView.as_view(),  name='follow_add'),
+    path('follow/<int:pk>/delete',        vc.FollowDeleteView.as_view(),  name='follow_add'),
+
+    path('feed/',        vc.FeedView.as_view(),  name='feed'),
 ]

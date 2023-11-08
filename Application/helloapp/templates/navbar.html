@@ -11,6 +11,9 @@
             {% if user.is_authenticated %}
 
             <li class="nav-item">
+                <a class="nav-link  text-light " href="/helloapp/feed/">Feed</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link  text-light " href="/helloapp/user/home">Hello {{ user.username }}</a>
             </li>
             <li class="nav-item">

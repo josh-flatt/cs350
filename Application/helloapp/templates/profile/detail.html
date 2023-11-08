@@ -8,8 +8,20 @@ Profile
 
 {% block content %}
 
+{% if user.is_authenticated %}
+    {% if user.appuser.profile != object %}
+        {% if user.appuser.profile in object.follower_profiles %}
+        <p><a href="/helloapp/follow/{{ object.pk }}/delete" class="btn btn-danger m-2">Unfollow</a></p>
+        {% else %}
+        <p><a href="/helloapp/follow/{{ object.pk }}" class="btn btn-success m-2">Follow</a></p>
+        {% endif %}
+    {% endif %}
+{% endif %}
+
 <div>
-    <img src="{{ object.profilePicture }}" height="150" />
+    {% if object.profile_picture %}
+    <img src="{{ object.profile_picture.url }}" height="150" />
+    {% endif %}
     <h2>Overview</h2>
     <p>Name: {{ object.firstName }} {{ object.lastName }}</p>
     <p>Email: {{ object.email }}</p>
@@ -44,6 +56,14 @@ Profile
         {% endfor %}
     </ul>
 
+    <h2>Following Profiles</h2>
+    <ul>
+      {% for profile in object.following_profiles %}
+        <li><a href="/helloapp/profile/{{ profile.pk }}">{{ profile.appuser.user.username }}</a></li>
+      {% empty %}
+        <li>No profiles followed yet.</li>
+      {% endfor %}
+    </ul>
 </div>
 
 {% endblock content %}
@@ -60,7 +80,7 @@ Profile
 
             <ul>
                 {% for post in object.posts %}
-                <li><a href="/helloapp/profile/{{ post.profile.pk }}">{{ post.profile.appuser.user.username }}</a></li>
+                <li><a href="/helloapp/profile/{{ post.profile.pk }}">{{ post.profile.appuser.user.username }}</a> - {{ post.timestamp }}</li>
                 <p>{{ post.content }}</p>
                 {% endfor %}
             </ul>
