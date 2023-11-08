@@ -58,7 +58,7 @@ class FeedView(LoginRequiredMixin, ListView):
 
 # Follow Views
 
-class FollowAddView(RedirectView):
+class FollowAddView(LoginRequiredMixin, RedirectView):
     permanent = False
 
     def get_redirect_url(self, *args, **kwargs):
@@ -70,7 +70,7 @@ class FollowAddView(RedirectView):
         # We can use success and fail url logic to route failed adds later
         return reverse_lazy('profile_list')
         
-class FollowDeleteView(RedirectView):
+class FollowDeleteView(LoginRequiredMixin, RedirectView):
     permanent = False
 
     def get_redirect_url(self, *args, **kwargs):
@@ -108,7 +108,7 @@ class ProfileUpdateView(vf.IsUserRecordMixin, UpdateView):
     
     success_url = reverse_lazy('profile_home')
 
-class ProfilePictureUpdateView(UpdateView):
+class ProfilePictureUpdateView(vf.IsUserRecordMixin, UpdateView):
     model = Profile
     form_class = ProfilePictureForm
     template_name = 'profile/addprofilepic.html'
