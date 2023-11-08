@@ -52,7 +52,6 @@ Profile
     <ul>
         {% for skill in object.skills %}
         <li>{{ skill.skillName }} ({{ skill.skillLevel }})</li>
-        <p>Endorsement Count: {{ skill.endorsementCount }}</p>
         {% endfor %}
     </ul>
 
