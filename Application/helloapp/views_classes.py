@@ -77,12 +77,12 @@ class ExperienceAddView(LoginRequiredMixin, CreateView):
         form.instance.profile = vf.get_profile(self.request.user.appuser)
         return super().form_valid(form)
     
-class ExperienceDeleteView(vf.IsUserProfileMixin, DeleteView):
+class ExperienceDeleteView(vf.IsUserProfileFromExpMixin, DeleteView):
     model = Experience
     template_name = 'experience/delete.html'
     success_url = reverse_lazy('profile_home')
 
-class ExperienceUpdateView(vf.IsUserProfileMixin, UpdateView):
+class ExperienceUpdateView(vf.IsUserProfileFromExpMixin, UpdateView):
     template_name = "experience/edit.html"
     model = Experience
     fields = '__all__'
@@ -100,12 +100,12 @@ class EducationAddView(LoginRequiredMixin, CreateView):
         form.instance.profile = vf.get_profile(self.request.user.appuser)
         return super().form_valid(form)
     
-class EducationDeleteView(vf.IsUserProfileMixin, DeleteView):
+class EducationDeleteView(vf.IsUserProfileFromEduMixin, DeleteView):
     model = Education
     template_name = 'education/delete.html'
     success_url = reverse_lazy('profile_home')
 
-class EducationUpdateView(vf.IsUserProfileMixin, UpdateView):
+class EducationUpdateView(vf.IsUserProfileFromEduMixin, UpdateView):
     template_name = "education/edit.html"
     model = Education
     fields = '__all__'
@@ -123,12 +123,12 @@ class SkillAddView(LoginRequiredMixin, CreateView):
         form.instance.profile = vf.get_profile(self.request.user.appuser)
         return super().form_valid(form)
     
-class SkillDeleteView(vf.IsUserProfileMixin, DeleteView):
+class SkillDeleteView(vf.IsUserProfileFromSkillMixin, DeleteView):
     model = Skill
     template_name = 'skill/delete.html'
     success_url = reverse_lazy('profile_home')
 
-class SkillUpdateView(vf.IsUserProfileMixin, UpdateView):
+class SkillUpdateView(vf.IsUserProfileFromSkillMixin, UpdateView):
     template_name = "skill/edit.html"
     model = Skill
     fields = '__all__'
