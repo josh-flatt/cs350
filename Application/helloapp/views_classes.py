@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views import View
-from .models import AppUser, Profile, User, Experience, Education, Skill
+from .models import AppUser, Profile, User, Experience, Education, Skill, Post
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 import helloapp.views_functions as vf
@@ -131,5 +131,33 @@ class SkillDeleteView(vf.IsUserProfileFromSkillMixin, DeleteView):
 class SkillUpdateView(vf.IsUserProfileFromSkillMixin, UpdateView):
     template_name = "skill/edit.html"
     model = Skill
+    fields = '__all__'
+    success_url = reverse_lazy('profile_home')
+
+# Post Views
+
+class PostListView(vf.IsUserProfileMixin, DetailView):
+    template_name = 'profile/postlist.html'
+    model = Profile
+    context_object_name = 'postlist'
+
+class PostAddView(LoginRequiredMixin, CreateView):
+    template_name = "post/add.html"
+    model = Post
+    fields = '__all__'
+    success_url = reverse_lazy('profile_home')
+
+    def form_valid(self, form):
+        form.instance.profile = vf.get_profile(self.request.user.appuser)
+        return super().form_valid(form)
+    
+class PostDeleteView(vf.IsUserPostMixin, DeleteView):
+    model = Post
+    template_name = 'post/delete.html'
+    success_url = reverse_lazy('profile_home')
+
+class PostUpdateView(vf.IsUserPostMixin, UpdateView):
+    template_name = "post/edit.html"
+    model = Post
     fields = '__all__'
     success_url = reverse_lazy('profile_home')

@@ -42,6 +42,23 @@ class IsUserProfileMixin(AccessMixin):
             return self.handle_no_permission()
         return super().dispatch(request, *args, **kwargs)
     
+class IsUserPostMixin(AccessMixin):
+    def test_func(self):
+        post = get_object_or_404(Post, pk = self.kwargs["pk"])
+        return self.request.user == post.profile.appuser.user
+
+    def get_test_func(self):
+        """
+        Override this method to use a different test_func method.
+        """
+        return self.test_func
+
+    def dispatch(self, request, *args, **kwargs):
+        user_test_result = self.get_test_func()()
+        if not user_test_result:
+            return self.handle_no_permission()
+        return super().dispatch(request, *args, **kwargs)
+    
 class IsUserProfileFromExpMixin(AccessMixin):
     def test_func(self):
         experience = get_object_or_404(Experience, pk = self.kwargs["pk"])

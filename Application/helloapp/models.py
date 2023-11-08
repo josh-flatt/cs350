@@ -24,10 +24,6 @@ class AppUser(models.Model):
     def name(self):
         return self.user.first_name + ' ' + self.user.last_name
     
-    @property
-    def posts(self):
-        return Post.objects.filter(author=self)
-    
     @staticmethod
     def get_me(user):
         return AppUser.objects.get_or_create(user=user)[0]
@@ -64,6 +60,10 @@ class Profile(models.Model):
     @property
     def name(self):
         return 'Profile of ' + self.appuser
+    
+    @property
+    def posts(self):
+        return Post.objects.filter(profile=self)
     
     @property
     def experiences(self):
@@ -151,15 +151,12 @@ class Skill(models.Model):
 
 class Post(models.Model):
     postID = models.AutoField(primary_key=True)
-    appuser = models.ForeignKey(AppUser, on_delete=models.CASCADE)
+    profile = models.ForeignKey(Profile, on_delete=models.CASCADE, editable=False)
     content = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
-    likes = models.PositiveIntegerField(default=0)
-    comments = models.PositiveIntegerField(default=0)
-    shares = models.PositiveIntegerField(default=0)
 
     def __str__(self):
-        return f"Post by {self.appuser}: {self.content[:50]}"
+        return f"Post by {self.profile.appuser.user.username}: {self.content[:50]}"
 
 class Company(models.Model):
     companyID = models.AutoField(primary_key=True)

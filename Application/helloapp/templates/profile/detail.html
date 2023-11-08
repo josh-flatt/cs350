@@ -47,3 +47,26 @@ Profile
 </div>
 
 {% endblock content %}
+
+{% block block2 %}
+<div class="container m-5">
+    <div class="card bg-light text-dark p-5">
+
+        <h1 class="text-primary text-center">
+            Posts
+        </h1>
+
+        <div>
+
+            <ul>
+                {% for post in object.posts %}
+                <li><a href="/helloapp/profile/{{ post.profile.pk }}">{{ post.profile.appuser.user.username }}</a></li>
+                <p>{{ post.content }}</p>
+                {% endfor %}
+            </ul>
+        
+        </div>
+
+    </div>
+</div>
+{% endblock block2 %}

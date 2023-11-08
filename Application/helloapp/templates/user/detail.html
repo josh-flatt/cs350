@@ -16,11 +16,15 @@ Account Details
         <a href="/helloapp/profile/home" class="btn btn-success m-5">View Profile</a>
 
         <a href="/helloapp/profile/{{ object.pk }}/" class="btn btn-success m-5">Edit Profile</a>
-
-        <a href="{% url 'password_change' %}" class="btn btn-success m-5">Change Password</a>
     </p>
 
     <p>
+        <a href="/helloapp/posts/{{ object.pk }}" class="btn btn-success m-5">Edit Posts</a>
+    </p>
+
+    <p>
+        <a href="{% url 'password_change' %}" class="btn btn-warning m-5">Change Password</a>
+
         <a href="/helloapp/user/{{ object.user.pk }}/delete" class="btn btn-danger m-5">Remove User</a>
     </p>
 

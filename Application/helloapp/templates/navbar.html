@@ -14,8 +14,13 @@
                 <a class="nav-link  text-light " href="/helloapp/user/home">Hello {{ user.username }}</a>
             </li>
             <li class="nav-item">
+                <a class="nav-link  text-light " href="/helloapp/post/add">Create Post</a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link  text-light " href="{% url 'logout' %}">Log out</a>
             </li>
+
+
 
             {% else %}
 

@@ -46,5 +46,10 @@ urlpatterns = [
     path('skill/add',             vc.SkillAddView.as_view(),  name='skill_add'),
     path('skill/<int:pk>/delete', vc.SkillDeleteView.as_view(),  name='skill_delete'),
     path('skill/<int:pk>/',        vc.SkillUpdateView.as_view(),  name='skill_edit'),
+
+    path('posts/<int:pk>',             vc.PostListView.as_view(),  name='post_list'),
+    path('post/add',             vc.PostAddView.as_view(),  name='post_add'),
+    path('post/<int:pk>/delete', vc.PostDeleteView.as_view(),  name='post_delete'),
+    path('post/<int:pk>/',        vc.PostUpdateView.as_view(),  name='post_edit'),
     
 ]
