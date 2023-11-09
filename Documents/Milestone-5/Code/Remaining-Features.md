@@ -2,49 +2,53 @@
 
 ## Features
 
-[KAN-8 Create website logos/theme](#kan-8)
+[KAN-8 Create website logos/theme (1.1)](#kan-8)
 
-[KAN-9 Create site-wide CSS styling](#kan-9)
+[KAN-9 Create site-wide CSS styling (1.1)](#kan-9)
 
-[KAN-11 Create an about/contact page](#kan-11)
+[KAN-11 Create an about/contact page (1.1)](#kan-11)
 
-[KAN-15 Account Recovery View](#kan-15)
+[KAN-15 Account Recovery View (1.1)](#kan-15)
 
-[KAN-16 Create Profile View](#kan-16)
+~~[KAN-16 Create Profile View](#kan-16)~~
 
-[KAN-17 Create Profile Edit View](#kan-17)
+~~[KAN-17 Create Profile Edit View](#kan-17)~~
 
-[KAN-18 Create Profile Delete View](#kan-18)
+~~[KAN-18 Create Profile Delete View](#kan-18)~~
 
-[KAN-19 Add friends list view/feature](#kan-19)
+~~[KAN-19 Add friends list view/feature](#kan-19)~~
 
-[KAN-21 Seperate Adding Profile Picture From Edit Profile](#kan-21)
+~~[KAN-21 Seperate Adding Profile Picture From Edit Profile](#kan-21)~~
 
-[KAN-22 Fix Page Titles](#kan-22)
+~~[KAN-22 Fix Page Titles](#kan-22)~~
 
-[KAN-23 Improve Date Entry (Calendar Widget)](#kan-23)
+[KAN-23 Improve Date Entry (Calendar Widget) (1.1)](#kan-23)
 
-[KAN-24 Fix Profile Element Keys](#kan-24)
+~~[KAN-24 Fix Profile Element Keys](#kan-24)~~
 
-[KAN-25 Fix Profile Element Permissions](#kan-25)
+~~[KAN-25 Fix Profile Element Permissions](#kan-25)~~
 
-[KAN-26 Refine Edit Profile Elements UX and Styling](#kan-26)
+[KAN-26 Refine Edit Profile Elements UX and Styling (1.1)](#kan-26)
 
-[KAN-27 Implement Connection Model](#kan-27)
+[KAN-27 Implement Connection Model (1.1)](#kan-27)
 
-[KAN-28 Create Connection UI](#kan-28)
+[KAN-28 Create Connection UI (1.1)](#kan-28)
 
-[KAN-29 Implement Photo Upload](#kan-29)
+~~[KAN-29 Implement Photo Upload](#kan-29)~~
 
-[KAN-30 Write Tests That Cover Entire Release](#kan-30)
+~~[KAN-30 Write Tests That Cover Entire Release](#kan-30)~~
 
-[KAN-31 Verify Responsive CSS (Mobile Display)](#kan-31)
+[KAN-31 Verify Responsive CSS (Mobile Display) (1.1)](#kan-31)
 
-[KAN-32 Implement Follow Function](#kan-32)
+~~[KAN-32 Implement Follow Function](#kan-32)~~
 
-[KAN-33 Implement Managed Database (1.1?)](#kan-33)
+[KAN-33 Implement Managed Database (1.1)](#kan-33)
 
-[KAN-34 Refactoring And Code Cleanup](#kan-34)
+[KAN-34 Refactoring And Code Cleanup (1.1)](#kan-34)
+
+[KAN-35 Create Custom Logout/Change Password Screens (1.1)](#kan-35)
+
+[KAN-36 Create "403 Forbidden" Screen (1.1)](#kan-36)
 
 ## Details
 
@@ -520,7 +524,7 @@ Implement Follow Function
 
 ### KAN-33
 
-Implement Managed Database (1.1?)
+Implement Managed Database
 
 1. **Database Migration and Setup**
    - Plan and perform database migration to a managed database service (if applicable).
@@ -565,3 +569,51 @@ Refactoring And Code Cleanup
 5. **Final Code Review and Quality Assurance**
    - Conduct a final code review to confirm that the refactoring and cleanup efforts meet quality standards.
    - Verify that the codebase is in a better state than before.
+
+### KAN-35
+
+Create Custom Logout/Change Password Screens
+
+1. **Design and Wireframing**
+   - Design the user interface for custom logout and change password screens.
+   - Create wireframes or sketches to plan the layout and visual elements.
+
+2. **Development of Logout Screen**
+   - Implement the custom logout screen, ensuring a user-friendly experience.
+   - Consider additional information or options to include on the logout screen.
+
+3. **Development of Change Password Screen**
+   - Implement the custom change password screen with a clear and intuitive layout.
+   - Include necessary form fields and instructions for password modification.
+
+4. **Testing and Validation**
+   - Test both the custom logout and change password screens.
+   - Verify that users can successfully log out and change their passwords.
+
+5. **User Experience Enhancement**
+   - Gather feedback from users about the custom screens.
+   - Make enhancements to improve the user experience and provide clear instructions.
+
+### KAN-36
+
+Create "403 Forbidden" Screen
+
+1. **Design and Wireframing**
+   - Design the user interface for the "403 Forbidden" screen.
+   - Plan the layout and content to inform users about restricted access.
+
+2. **Development of "403 Forbidden" Screen**
+   - Implement the "403 Forbidden" screen, clearly indicating that the user does not have permission to access a particular resource.
+   - Include any relevant information or actions, such as contacting support.
+
+3. **Testing and Validation**
+   - Test the "403 Forbidden" screen to ensure it displays correctly when users attempt unauthorized access.
+   - Verify that users understand the restriction and are guided appropriately.
+
+4. **User Experience Enhancement**
+   - Gather feedback on the "403 Forbidden" screen from users.
+   - Make enhancements to improve the clarity of the message and provide alternative actions.
+
+5. **Security Review and Final Validation**
+   - Review the security aspects of the "403 Forbidden" screen.
+   - Confirm that it effectively prevents unauthorized access and adheres to security best practices.
