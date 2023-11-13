@@ -1,5 +1,5 @@
 .toolbar {
-    background-color: #333;
+    background-color: blue; /* Change this to the desired shade of blue */
     padding: 10px;
     display: flex;
     justify-content: space-between;
