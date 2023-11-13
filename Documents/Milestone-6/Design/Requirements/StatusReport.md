@@ -18,7 +18,7 @@
 
 4. Status Update Video
     
-	I created a summary of the work completed. View the video at [BridgeOut - Status Update Video]()
+	I created a summary of the work completed. View the video at [BridgeOut - Status Update Video](https://drive.google.com/file/d/1erXjO27PRh3O1HtdkFWsokIsZ9id-fVH/view?usp=sharing)
 
 ## Engineering Investment
 
