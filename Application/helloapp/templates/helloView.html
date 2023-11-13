@@ -1,73 +1,44 @@
-<!DOCTYPE html>
+{% extends 'theme.html' %}
+
+{% block title %}
+Edit Profile
+{% endblock title %}
+
+{% block content %}
 <html lang="en">
+
 <head>
+    {% load static %}
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-    <title>Bridge Out</title> <!-- Updated title -->
-    <style>
-        /* Add your navbar styles here */
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-        nav ul li a {
-            text-decoration: none;
-            color: #fff;
-        }
-    </style>
+    <title>BridgeOut - Edit Profile</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
+
 <body>
+    <!-- Navbar -->
+    {% include 'navbar.html' %}
 
-    <header>
-        <nav>
-            <ul>
-                <li><a href="/helloapp/profile">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <h1>Bridge Out</h1>
-    </header>
+    <div class="container m-5">
+        {% load crispy_forms_tags %}
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn btn-success m-5" type="submit">Save Record</button>
+        </form>
 
-    <main>
-        <section>
-            <h2>Welcome to Bridge Out</h2> <!-- Updated text -->
-            <p>This is the main content section of your website. You can add text, images, and other content here.</p>
-        </section>
+        <!-- Experience, Education, Skills Sections -->
 
-        <section>
-            <h2>Featured Products</h2>
-            <ul>
-                <li>Product 1</li>
-                <li>Product 2</li>
-                <li>Product 3</li>
-            </ul>
-        </section>
+        <!-- Rest of the content from your first template -->
 
-        <section>
-            <a href="/helloapp/profile" class="btn btn-success m-5">BridgeOut Profile List</a>
-        </section>
-    </main>
+    </div>
 
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2023 Bridge Out</p>
+        <div class="container">
+            <p>&copy; 2023 BridgeOut. All rights reserved.</p>
+        </div>
     </footer>
-
 </body>
 </html>
+{% endblock content %}
