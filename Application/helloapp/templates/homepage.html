@@ -4,16 +4,14 @@
 Edit Profile
 {% endblock title %}
 
-
 {% block content %}
-
 <html lang="en">
 
 <head>
     {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BridgeOut - Home</title>
+    <title>BridgeOut - Edit Profile</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 
@@ -21,24 +19,19 @@ Edit Profile
     <!-- Navbar -->
     {% include 'navbar.html' %}
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Welcome to BridgeOut!</h1>
-            <p>Connecting people and creating opportunities.</p>
-            <a href="{% url 'registration' %}" class="btn-register">Get Started</a>
-        </div>
-    </section>
+    <div class="container m-5">
+        {% load crispy_forms_tags %}
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <button class="btn btn-success m-5" type="submit">Save Record</button>
+        </form>
 
-    <!-- Features Section -->
-    <section class="features">
-        <div class="container">
-            <h2>Why Choose BridgeOut?</h2>
-            <div class="feature-grid">
-                <!-- ... Your feature items ... -->
-            </div>
-        </div>
-    </section>
+        <!-- Experience, Education, Skills Sections -->
+
+        <!-- Rest of the content from your first template -->
+
+    </div>
 
     <!-- Footer -->
     <footer>
@@ -47,5 +40,5 @@ Edit Profile
         </div>
     </footer>
 </body>
-
-{% endblock title %}
+</html>
+{% endblock content %}
