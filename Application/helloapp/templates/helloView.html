@@ -19,14 +19,16 @@ Welcome to BridgeOut
     <!-- Hero Section -->
     <section class="hero"> <!-- Change the background-color to match your theme -->
         <div class="container">
-             <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+             <!-- Navigation Bar -->
+        <nav>
+            <ul style="list-style-type: none; padding: 0; text-align: center;">
+                <li style="display: inline; margin-right: 20px;"><a href="#">Home</a></li>
+                <li style="display: inline; margin-right: 20px;"><a href="#">About Us</a></li>
+                <li style="display: inline; margin-right: 20px;"><a href="#">Services</a></li>
+                <li style="display: inline;"><a href="#">Contact</a></li>
             </ul>
         </nav>
+        <!-- End Navigation Bar -->
             <h1>Welcome to BridgeOut!</h1>
             <p>Connecting people and creating opportunities.</p>
             <a href="{% url 'user_add' %}" class="btn-register">Get Started</a>
