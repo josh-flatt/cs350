@@ -21,11 +21,34 @@ Welcome to BridgeOut
     <div class="container">
         <!-- Navigation Bar with Background Color -->
         <nav class="navbar navbar-expand-sm navbar-dark bg-primary p-5 mb-5 text-light">
-            <ul style="list-style-type: none; padding: 0; text-align: center;">
-                <li style="display: inline; margin-right: 20px;"><a href="#">Profiles</a></li>
-                <li style="display: inline; margin-right: 20px;"><a href="#">Log In</a></li>
-                <li style="display: inline;"><a href="#">Sign Up</a></li>
-            </ul>
+            <div class="container">
+                <ul class="navbar-nav text-light ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link text-light" href="{% url 'profile_list' %}">Profiles</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                        <li class="nav-item">
+                            <a class="nav-link  text-light " href="/helloapp/feed/">Feed</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-light " href="/helloapp/user/home">Hello {{ user.username }}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-light " href="/helloapp/post/add">Create Post</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-light " href="{% url 'logout' %}">Log out</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="nav-link  text-light " href="{% url 'login' %}">Log In</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link  text-light " href="{% url 'user_add' %}">Sign Up</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
         </nav>
         <!-- End Navigation Bar -->
         
