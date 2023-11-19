@@ -1,22 +1,26 @@
 {% extends 'theme.html' %}
 
-
 {% block title %}
 {{ object.appuser }}
 {% endblock title %}
-
 
 {% block content %}
 
 {% if user.is_authenticated %}
     {% if user.appuser.profile == object %}
-        <p><a href="/helloapp/user/home" class="btn btn-secondary">Account Settings</a></p>
+        <p>
+            <a href="/helloapp/user/home" class="btn btn-secondary">Account Settings</a>
+        </p>
     {% endif %}
     {% if user.appuser.profile != object %}
         {% if user.appuser.profile in object.follower_profiles %}
-        <p><a href="/helloapp/follow/{{ object.pk }}/delete" class="btn btn-danger m-2">Unfollow</a></p>
+        <p>
+            <a href="/helloapp/follow/{{ object.pk }}/delete" class="btn btn-danger m-2">Unfollow</a>
+        </p>
         {% else %}
-        <p><a href="/helloapp/follow/{{ object.pk }}" class="btn btn-success m-2">Follow</a></p>
+        <p>
+            <a href="/helloapp/follow/{{ object.pk }}" class="btn btn-success m-2">Follow</a>
+        </p>
         {% endif %}
     {% endif %}
 {% endif %}
@@ -28,7 +32,8 @@
     <h2>About</h2>
     <p>Name: {{ object.firstName }} {{ object.lastName }}</p>
     <p>Email: {{ object.email }}</p>
-    <p>Birth Date: {{ object.birthDate }}</p>
+    {% comment %} I don't think we should be displaying users' birthdays. -Josh {% endcomment %}
+    {% comment %} <p>Birth Date: {{ object.birthDate }}</p> {% endcomment %}
     <p>Location: {{ object.location }}</p>
 
     <h2>Experience</h2>
@@ -38,6 +43,10 @@
         <p>Location: {{ experience.location }}</p>
         <p>Dates: {{ experience.startDate }} - {{ experience.endDate }}</p>
         <p>Desciption: {{ experience.description }}</p>
+        {% empty %}
+        <p>
+            <em>No experience provided.</em>
+        </p>
         {% endfor %}
     </ul>
 
@@ -48,6 +57,10 @@
         <p>Graduated: {{ education.graduationDate }}</p>
         <p>Activities: {{ education.activities }}</p>
         <p>Description: {{ education.description }}</p>
+        {% empty %}
+        <p>
+            <em>No education provided.</em>
+        </p>
         {% endfor %}
     </ul>
 
@@ -55,16 +68,22 @@
     <ul>
         {% for skill in object.skills %}
         <li>{{ skill.skillName }} ({{ skill.skillLevel }})</li>
+        {% empty %}
+        <p>
+            <em>No skills provided.</em>
+        </p>
         {% endfor %}
     </ul>
 
-    <h2>Following Profiles</h2>
+    <h2>Following</h2>
     <ul>
-      {% for profile in object.following_profiles %}
-        <li><a href="/helloapp/profile/{{ profile.pk }}">{{ profile.appuser.user.username }}</a></li>
-      {% empty %}
-        <li>No profiles followed yet.</li>
-      {% endfor %}
+        {% for profile in object.following_profiles %}
+            <li><a href="/helloapp/profile/{{ profile.pk }}">{{ profile.appuser.user.username }}</a></li>
+        {% empty %}
+        <p>
+            <em>No profiles followed yet.</em>
+        </p>
+        {% endfor %}
     </ul>
 </div>
 
@@ -73,22 +92,15 @@
 {% block block2 %}
 <div class="container m-5">
     <div class="card bg-light text-dark p-5">
-
-        <h1 class="text-primary text-center">
-            Posts
-        </h1>
-
+        <h1 class="text-primary text-center">Posts</h1>
         <div>
-
             <ul>
                 {% for post in object.posts %}
-                <li><a href="/helloapp/profile/{{ post.profile.pk }}">{{ post.profile.appuser.user.username }}</a> - {{ post.timestamp }}</li>
+                <li>Posted {{ post.timestamp }}</li>
                 <p>{{ post.content }}</p>
                 {% endfor %}
             </ul>
-        
         </div>
-
     </div>
 </div>
 {% endblock block2 %}
