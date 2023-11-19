@@ -6,33 +6,28 @@
 
         <ul class="navbar-nav text-light ml-auto">
             <li class="nav-item">
-                <a class="nav-link text-light" href="{% url 'profile_list' %}">Profiles</a>
+                <a class="nav-link text-light" href="{% url 'profile_list' %}">People</a>
             </li>
             {% if user.is_authenticated %}
-
                 <li class="nav-item">
-                    <a class="nav-link  text-light " href="/helloapp/feed/">Feed</a>
+                    <a class="nav-link text-light" href="/helloapp/feed/">Feed</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  text-light " href="/helloapp/user/home">Hello {{ user.username }}</a>
+                    <a class="nav-link text-light" href="/helloapp/profile/home">Profile</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  text-light " href="/helloapp/post/add">Create Post</a>
+                    <a class="nav-link text-light" href="/helloapp/post/add">Post</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link  text-light " href="{% url 'logout' %}">Log out</a>
+                    <a class="nav-link text-light" href="{% url 'logout' %}">Log Out</a>
                 </li>
-
             {% else %}
-
                 <li class="nav-item">
                     <a class="nav-link  text-light " href="{% url 'login' %}">Log In</a>
                 </li>
-
                 <li class="nav-item">
                     <a class="nav-link  text-light " href="{% url 'user_add' %}">Sign Up</a>
                 </li>
-
             {% endif %}
 
         </ul>

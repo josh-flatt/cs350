@@ -7,16 +7,16 @@ Feed
 
 
 {% block content %}
-
-<div>
-
-    <ul>
-        {% for post in feed %}
-        <li><a href="/helloapp/profile/{{ post.profile.pk }}">{{ post.profile.appuser.user.username }}</a> - {{ post.timestamp }}</li>
-        <p>{{ post.content }}</p>
-        {% endfor %}
-    </ul>
-
-</div>
-
+    <div>
+        <ul>
+            {% for post in feed %}
+                <li>
+                    <a href="/helloapp/profile/{{ post.profile.pk }}">
+                        {{ post.profile.appuser.user.username }}
+                    </a> - {{ post.timestamp }}
+                </li>
+                <p>{{ post.content }}</p>
+            {% endfor %}
+        </ul>
+    </div>
 {% endblock content %}
