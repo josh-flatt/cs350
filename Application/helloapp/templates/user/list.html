@@ -9,23 +9,26 @@ List of Users
 {% block content %}
 
 <div class="row">
-
     <div class="card col-lg">
-
-        <table class="table table-hover">
-            <tr>
-                <th>User</th>
-            </tr>
-
-            {% for appuser in object_list %}
-            <tr>
-                <td><a href="/helloapp/user/{{ appuser.pk }}">{{ appuser.user.username }}</a></td>
-            </tr>
-            {% endfor %}
-
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">User</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for appuser in object_list %}
+                <tr>
+                    <th scope="row">{{ appuser.pk }}</th>
+                    <td><a href="/helloapp/profile/{{ appuser.pk }}">{{ appuser.user.username }}</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
         </table>
 
     </div>
+</div>
 
 </div>
 

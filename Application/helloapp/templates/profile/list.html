@@ -12,17 +12,25 @@ List of Profiles
 
     <div class="card col-lg">
 
-        <table class="table table-hover">
-            <tr>
-                <th>Profile</th>
-            </tr>
-
-            {% for profile in object_list %}
-            <tr>
-                <td><a href="/helloapp/profile/{{ profile.pk }}">{{ profile.appuser.user.username }}'s Profile</a></td>
-            </tr>
-            {% endfor %}
-
+        <table class="table table-hover table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Profile</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">First Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for profile in object_list %}
+                <tr>
+                    <th scope="row">{{ profile.pk }}</th>
+                    <td><a href="/helloapp/profile/{{ profile.pk }}">{{ profile.appuser.user.username }}</a></td>
+                    <td>{{ profile.lastName }}</td>
+                    <td>{{ profile.firstName }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
         </table>
 
     </div>

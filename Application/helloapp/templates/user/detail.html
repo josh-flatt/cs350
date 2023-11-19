@@ -12,32 +12,20 @@ Account Details
     <h2><a href="/helloapp/profile/home">{{ object.user.username }}</a></h2>
     <p>Account created on {{ object.accountCreationDate }}</p>
 
-    <div class="btn-group" role="group" aria-label="Edit Account">
+    <div class="btn-group" role="group" aria-label="Edit Profile">
         <a href="/helloapp/profile/{{ object.pk }}/" class="btn btn-primary">Edit Profile</a>
         <a href="/helloapp/profile/{{ object.pk }}/addpic" class="btn btn-primary">Add Profile Picture</a>
         <a href="/helloapp/posts/{{ object.pk }}" class="btn btn-primary">Edit Posts</a>
+    </div>
+    <br><br>
+    <div class="alert alert-danger" role="alert">
+        Please administer caution when choosing either of the below options.
+    </div>
+    <br>
+    <div class="btn-group" role="group" aria-label="Edit Account">
+        <a href="/helloapp/user/{{ object.user.pk }}/delete" class="btn btn-danger">Delete Account</a>
         <a href="{% url 'password_change' %}" class="btn btn-warning">Change Password</a>
     </div>
-
-{% comment %} 
-    <p>
-        <a href="/helloapp/profile/home" class="btn btn-success m-5">View Profile</a>
-
-        <a href="/helloapp/profile/{{ object.pk }}/" class="btn btn-success m-5">Edit Profile</a>
-
-        <a href="/helloapp/profile/{{ object.pk }}/addpic" class="btn btn-success m-5">Add Profile Picture</a>
-    </p>
-
-    <p>
-        <a href="/helloapp/posts/{{ object.pk }}" class="btn btn-success m-5">Edit Posts</a>
-    </p> {% endcomment %}
-
-    <p>
-        {% comment %} <a href="{% url 'password_change' %}" class="btn btn-warning m-5">Change Password</a> {% endcomment %}
-
-        <a href="/helloapp/user/{{ object.user.pk }}/delete" class="btn btn-danger m-5">Delete Account</a>
-    </p>
-
 </div>
 
 {% endblock content %}
