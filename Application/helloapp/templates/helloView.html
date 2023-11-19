@@ -52,11 +52,12 @@ Welcome to BridgeOut
         </nav>
             <h1 style="text-align: center;">Welcome to BridgeOut!</h1>
             <p style="text-align: center;">Connecting people and creating opportunities.</p>
-            {% comment %} <button type="button" class="btn btn-primary btn-lg" style="text-align: left;" onclick="window.location.href='{% url 'user_add' %}'">Get Started</button> {% endcomment %}
-            <div class="alert alert-primary" role="alert">
-                If you are new, <a href="{% url 'user_add' %}">Create an Account</a> for free.
-                Otherwise, please <a href="{% url 'login' %}">Log In</a>.
-            </div>
+            {% if not user.is_authenticated %}
+                <div class="alert alert-primary" role="alert">
+                    If you are new, <a href="{% url 'user_add' %}">Create an Account</a> for free.
+                    Otherwise, please <a href="{% url 'login' %}">Log In</a>.
+                </div>
+            {% endif %}
         </div>
     </section>
 
