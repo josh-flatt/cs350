@@ -2,13 +2,16 @@
 
 
 {% block title %}
-Profile
+{{ object.appuser }}
 {% endblock title %}
 
 
 {% block content %}
 
 {% if user.is_authenticated %}
+    {% if user.appuser.profile == object %}
+        <p><a href="/helloapp/user/home" class="btn btn-secondary">Account Settings</a></p>
+    {% endif %}
     {% if user.appuser.profile != object %}
         {% if user.appuser.profile in object.follower_profiles %}
         <p><a href="/helloapp/follow/{{ object.pk }}/delete" class="btn btn-danger m-2">Unfollow</a></p>
@@ -20,9 +23,9 @@ Profile
 
 <div>
     {% if object.profile_picture %}
-    <img src="{{ object.profile_picture.url }}" height="150" />
+        <img src="{{ object.profile_picture.url }}" height="150" />
     {% endif %}
-    <h2>Overview</h2>
+    <h2>About</h2>
     <p>Name: {{ object.firstName }} {{ object.lastName }}</p>
     <p>Email: {{ object.email }}</p>
     <p>Birth Date: {{ object.birthDate }}</p>

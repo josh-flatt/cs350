@@ -9,9 +9,17 @@ Account Details
 {% block content %}
 
 <div>
-    <h2>{{ object.user.username }}</h2>
-    <p>Account Creation Date: {{ object.accountCreationDate }}</p>
+    <h2><a href="/helloapp/profile/home">{{ object.user.username }}</a></h2>
+    <p>Account created on {{ object.accountCreationDate }}</p>
 
+    <div class="btn-group" role="group" aria-label="Edit Account">
+        <a href="/helloapp/profile/{{ object.pk }}/" class="btn btn-primary">Edit Profile</a>
+        <a href="/helloapp/profile/{{ object.pk }}/addpic" class="btn btn-primary">Add Profile Picture</a>
+        <a href="/helloapp/posts/{{ object.pk }}" class="btn btn-primary">Edit Posts</a>
+        <a href="{% url 'password_change' %}" class="btn btn-warning">Change Password</a>
+    </div>
+
+{% comment %} 
     <p>
         <a href="/helloapp/profile/home" class="btn btn-success m-5">View Profile</a>
 
@@ -22,12 +30,12 @@ Account Details
 
     <p>
         <a href="/helloapp/posts/{{ object.pk }}" class="btn btn-success m-5">Edit Posts</a>
-    </p>
+    </p> {% endcomment %}
 
     <p>
-        <a href="{% url 'password_change' %}" class="btn btn-warning m-5">Change Password</a>
+        {% comment %} <a href="{% url 'password_change' %}" class="btn btn-warning m-5">Change Password</a> {% endcomment %}
 
-        <a href="/helloapp/user/{{ object.user.pk }}/delete" class="btn btn-danger m-5">Remove User</a>
+        <a href="/helloapp/user/{{ object.user.pk }}/delete" class="btn btn-danger m-5">Delete Account</a>
     </p>
 
 </div>
