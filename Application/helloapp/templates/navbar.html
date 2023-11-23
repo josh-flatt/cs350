@@ -1,8 +1,16 @@
+{% load static %}
 <nav class="navbar navbar-expand-sm navbar-dark bg-primary text-light">
 
     <div class="container">
 
-        <a class="navbar-brand text-light" style="font-size: 45px !important" href="/">BridgeOut</a>
+        <nav class="navbar">
+            <div class="container-fluid">
+              <a class="navbar-brand" style="font-size: 45px !important" href="/">
+                <img src="{% static '/images/company-logo.png' %}" alt="compnay logo" width="65" height="65" class="d-inline-block align-text-top">
+                BridgeOut
+              </a>
+            </div>
+        </nav>
 
         <ul class="navbar-nav text-light ml-auto">
             <li class="nav-item">
