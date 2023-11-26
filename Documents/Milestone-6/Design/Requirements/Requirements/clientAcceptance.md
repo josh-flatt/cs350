@@ -38,7 +38,8 @@ The test coverage report indicates an overall coverage of 87%, which is a robust
 The issue-tracking system presents a clear picture of task management. A majority of the tasks related to user interface enhancements, database management, and code refactoring have been marked as done. Remaining tasks include "Create Custom Logout/Change Password Screens" and "Implement Managed Database," which are pivotal for the upcoming release.
 
 #### Burndown Chart
-To create a burndown chart, we need to plot the number of tasks completed over time against the total expected work. The two images do not provide a timeline, so the burndown chart cannot be accurately generated without additional temporal data.
+![image](https://github.com/josh-flatt/cs350/assets/79126650/5f224e2c-7847-4598-a152-446d7dba58cd)
+
 
 #### Customer Feedback Summary
 - **Chris**: Encountered difficulty with the photo upload feature, suggesting a more streamlined approach.
