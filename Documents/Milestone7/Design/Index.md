@@ -1,4 +1,4 @@
-# Milestone 7 Index - Design - Ryan Lunas - BridgeOut
+# Milestone 7 Index - Design - Kyle Longaker - BridgeOut
 
 ## Database Management Policy and Practices
 
