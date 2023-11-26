@@ -46,9 +46,9 @@ Tasks should automatically appear on the calendar on their assigned dates.
 Distinguishing project deadlines from tasks on the calendar would be useful.
 The ability to add tasks directly from the calendar would enhance usability.
 Feedback: Use red text thoughtfully, especially in calendar notifications, to ensure clarity and avoid any misinterpretation.
-### Profile:
+## Profile:
 
-#### Positive Aspects:
+### Positive Aspects:
 
 User profiles are created upon account creation and autofilled with expected information.
 Areas for Improvement:
