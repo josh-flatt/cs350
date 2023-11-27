@@ -37,3 +37,5 @@ Code development: Approximately 6 hours.
 Team meetings: Approximately 2 hours.
 Conclusion:
 Milestone 4 marked significant progress in the project, particularly in the areas of user interface development and testing preparation. The home page and navigation bar provide a strong foundation for user interaction. Transitioning to the testing role ensures the application's reliability and quality. The focus now shifts to expanding views and addressing challenges related to navigation.
+## Video 
+https://www.youtube.com/watch?v=5Vnd4J_etok
