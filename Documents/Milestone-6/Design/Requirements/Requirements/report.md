@@ -19,6 +19,7 @@ The burndown chart for Milestone 6 illustrates a close adherence to the ideal ta
 **Customer Feedback Integration**
 
 Feedback from users Chris, Rachel, Mark, Ryan, and Emily has provided insightful perspectives on the app's functionality and user interface design. Key points of feedback included suggestions for improving the intuitiveness of the photo upload process, refining the navigation flow during profile updates, and the placement of the 'create post' feature. The lack of social interaction features such as liking and commenting was also a common theme among the feedback, which the team should prioritize in future updates.
+
 **Video**
 https://www.youtube.com/watch?v=6N1KU_mH5Cg
 
