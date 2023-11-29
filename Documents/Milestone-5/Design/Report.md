@@ -13,7 +13,7 @@
     * I spent about 6 hours on Design for Milestone 5
     * Our team met for 2 hours.
 * 5-minute Video Demo
-    * [Milestone 5 - Design](https://drive.google.com/file/d/178AQaCqk-bsFxKtv5c-KI2F8hKQ_fy6s/view?usp=sharing)
+    * [Milestone 5 - Design](https://drive.google.com/file/d/1xyJCLoOpB4V0qoY7gf2wrUoA1YMvhWyY/view?usp=sharing)
 
 ## Design Pattern Catalog
 
