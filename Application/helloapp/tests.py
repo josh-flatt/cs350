@@ -1,11 +1,11 @@
-import datetime
+#import datetime
 from django.contrib.auth.models import User
 from django.http import HttpRequest
 from django.test import TestCase
 from django.urls import reverse
 
 from .models import AppUser, Profile, Follow, Experience, Education, Skill, Post
-from .views_functions import get_appuser, get_profile, IsUserRecordMixin, IsUserProfileMixin, IsUserPostMixin, IsUserProfileFromExperienceMixin, IsUserProfileFromEduMixin, IsUserProfileFromSkillMixin
+from .views_functions import get_appuser, get_profile, IsUserRecordMixin, IsUserProfileMixin, IsUserPostMixin, IsUserProfileFromExperienceMixin, IsUserProfileFromEducationMixin, IsUserProfileFromSkillMixin
 
 '''python3 manage.py test'''
 
@@ -199,7 +199,7 @@ class MixinTests(TestCase):
         request = HttpRequest()
         request.user = self.user
         kwargs = {'pk': self.education.pk}
-        mixin = IsUserProfileFromEduMixin()
+        mixin = IsUserProfileFromEducationMixin()
         mixin.request = request
         mixin.kwargs = kwargs
 

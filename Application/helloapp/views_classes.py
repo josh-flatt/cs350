@@ -1,8 +1,8 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404 #, render
 from django.urls import reverse_lazy
-from django.views import View
+# from django.views import View
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView, RedirectView
 
 from .forms import ProfilePictureForm
@@ -147,12 +147,12 @@ class EducationAddView(LoginRequiredMixin, CreateView):
         form.instance.profile = vf.get_profile(self.request.user.appuser)
         return super().form_valid(form)
     
-class EducationDeleteView(vf.IsUserProfileFromEduMixin, DeleteView):
+class EducationDeleteView(vf.IsUserProfileFromEducationMixin, DeleteView):
     model = Education
     template_name = 'education/delete.html'
     success_url = reverse_lazy('profile_home')
 
-class EducationUpdateView(vf.IsUserProfileFromEduMixin, UpdateView):
+class EducationUpdateView(vf.IsUserProfileFromEducationMixin, UpdateView):
     template_name = "education/edit.html"
     model = Education
     fields = '__all__'
