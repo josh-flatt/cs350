@@ -30,6 +30,8 @@ After reviewing the project: I decided on these design patterns to choose for th
 
 Example code from the project can be found in the presentation in the same folder.
 
+Overall the project was already fairly factored. variables were declared when reused in most places, and when they weren't such as for the a variable in the dispatch methods in views_functions.py I inlined the variable. I also went through the imported modules and removed anything not in use to improve our performance. I also renamed the IsUserProfileFromExpMixin and IsUserProfileFromEduMixin methods to be more clear and verbose in views_functions.py.
+
 ## Help with implementation
 
 I helped with implementation this Milestone by testing the application and making modifications for production. This involved:
