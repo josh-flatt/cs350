@@ -21,8 +21,7 @@ class IsUserRecordMixin(AccessMixin):
         return self.test_func
 
     def dispatch(self, request, *args, **kwargs):
-        user_test_result = self.get_test_func()()
-        if not user_test_result:
+        if not self.get_test_func()():
             return self.handle_no_permission()
         return super().dispatch(request, *args, **kwargs)
 
@@ -38,8 +37,7 @@ class IsUserProfileMixin(AccessMixin):
         return self.test_func
 
     def dispatch(self, request, *args, **kwargs):
-        user_test_result = self.get_test_func()()
-        if not user_test_result:
+        if not self.get_test_func()():
             return self.handle_no_permission()
         return super().dispatch(request, *args, **kwargs)
     
@@ -55,12 +53,11 @@ class IsUserPostMixin(AccessMixin):
         return self.test_func
 
     def dispatch(self, request, *args, **kwargs):
-        user_test_result = self.get_test_func()()
-        if not user_test_result:
+        if not self.get_test_func()():
             return self.handle_no_permission()
         return super().dispatch(request, *args, **kwargs)
     
-class IsUserProfileFromExpMixin(AccessMixin):
+class IsUserProfileFromExperienceMixin(AccessMixin):
     def test_func(self):
         experience = get_object_or_404(Experience, pk = self.kwargs["pk"])
         return self.request.user == experience.profile.appuser.user
@@ -72,8 +69,7 @@ class IsUserProfileFromExpMixin(AccessMixin):
         return self.test_func
 
     def dispatch(self, request, *args, **kwargs):
-        user_test_result = self.get_test_func()()
-        if not user_test_result:
+        if not self.get_test_func()():
             return self.handle_no_permission()
         return super().dispatch(request, *args, **kwargs)
 
@@ -89,8 +85,7 @@ class IsUserProfileFromEduMixin(AccessMixin):
         return self.test_func
 
     def dispatch(self, request, *args, **kwargs):
-        user_test_result = self.get_test_func()()
-        if not user_test_result:
+        if not self.get_test_func()():
             return self.handle_no_permission()
         return super().dispatch(request, *args, **kwargs)
 
@@ -106,8 +101,7 @@ class IsUserProfileFromSkillMixin(AccessMixin):
         return self.test_func
 
     def dispatch(self, request, *args, **kwargs):
-        user_test_result = self.get_test_func()()
-        if not user_test_result:
+        if not self.get_test_func()():
             return self.handle_no_permission()
         return super().dispatch(request, *args, **kwargs)
 

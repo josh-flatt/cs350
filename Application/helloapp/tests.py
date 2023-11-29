@@ -5,7 +5,7 @@ from django.test import TestCase
 from django.urls import reverse
 
 from .models import AppUser, Profile, Follow, Experience, Education, Skill, Post
-from .views_functions import get_appuser, get_profile, IsUserRecordMixin, IsUserProfileMixin, IsUserPostMixin, IsUserProfileFromExpMixin, IsUserProfileFromEduMixin, IsUserProfileFromSkillMixin
+from .views_functions import get_appuser, get_profile, IsUserRecordMixin, IsUserProfileMixin, IsUserPostMixin, IsUserProfileFromExperienceMixin, IsUserProfileFromEduMixin, IsUserProfileFromSkillMixin
 
 '''python3 manage.py test'''
 
@@ -189,7 +189,7 @@ class MixinTests(TestCase):
         request = HttpRequest()
         request.user = self.user
         kwargs = {'pk': self.experience.pk}
-        mixin = IsUserProfileFromExpMixin()
+        mixin = IsUserProfileFromExperienceMixin()
         mixin.request = request
         mixin.kwargs = kwargs
 

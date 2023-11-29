@@ -124,12 +124,12 @@ class ExperienceAddView(LoginRequiredMixin, CreateView):
         form.instance.profile = vf.get_profile(self.request.user.appuser)
         return super().form_valid(form)
     
-class ExperienceDeleteView(vf.IsUserProfileFromExpMixin, DeleteView):
+class ExperienceDeleteView(vf.IsUserProfileFromExperienceMixin, DeleteView):
     model = Experience
     template_name = 'experience/delete.html'
     success_url = reverse_lazy('profile_home')
 
-class ExperienceUpdateView(vf.IsUserProfileFromExpMixin, UpdateView):
+class ExperienceUpdateView(vf.IsUserProfileFromExperienceMixin, UpdateView):
     template_name = "experience/edit.html"
     model = Experience
     fields = '__all__'
