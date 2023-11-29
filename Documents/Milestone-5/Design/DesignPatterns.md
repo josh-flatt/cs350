@@ -93,24 +93,83 @@ Including those, I have also chosen to have standards for:
   * Official Python Style Guide PEP-8: "Function names should be lowercase, with words separated by underscores as necessary to improve readability."
   * Functional Programming: Methods should do one thing and do it well.
   ```
-  
+    def test_profile_update_view(self):
+        url = reverse('profile_edit', args=[str(self.profile.pk)])
+        self.client.login(username='testuser', password='testpassword')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
+
+    def test_experience_add_view(self):
+        url = reverse('experience_add')
+        self.client.login(username='testuser', password='testpassword')
+        response = self.client.get(url)
+        self.assertEqual(response.status_code, 200)
   ```
+  These methods follow the PEP-8 standard using lowercase whole words with underscores. They also show functional programming by each of the methods focusing on only one operation of the system to test at a time.
+
 * Variables
   * Official Python Style Guide PEP-8: "Variable names follow the same convention as function names."
   * Whole words: single-letter variables shouldn't be used outside of loop contexts.
   ```
-  
+    @property
+    def following_profiles(self):
+        """
+        Get the list of profiles that the current profile is following.
+        """
+        follow_objects = Follow.objects.filter(follower=self)
+        return [follow_object.following for follow_object in follow_objects]
+    
+    @property
+    def follower_profiles(self):
+        """
+        Get the list of profiles that are following the current profile.
+        """
+        follow_objects = Follow.objects.filter(following=self)
+        return [follow_object.follower for follow_object in follow_objects]
   ```
+    These methods might not have that many variables, but the ones that they do have follow identical naming conventions as the methods. In the list comprehension on both methods they use a whole variable name to improve readibility, even if its a temporary inline variable.
+
 * Comments
   * Official Python Style Guide PEP-8: "Use inline comments sparingly."
-  * Self documenting. Python is meant to be a readable language. Any comments should only be vital organization.
+  * Self documenting. Python is meant to be a readable language. Any comments should only be vital information.
   * On larger documents, comments are ok to use to divide a file into sections.
   ```
-  
+    # Follow Views
+
+    class FollowAddView(LoginRequiredMixin, RedirectView):
+        permanent = False
+
+        def get_redirect_url(self, *args, **kwargs):
+            profile_to_follow_id = self.kwargs['pk']
+            profile_to_follow = get_object_or_404(Profile, id=profile_to_follow_id)
+            follower = Profile.get_me(AppUser.get_me(self.request.user))
+
+            follow, created = Follow.objects.get_or_create(follower=follower, following=profile_to_follow)
+            # We can use success and fail url logic to route failed adds later
+            return reverse_lazy('profile_list')
+            
+    class FollowDeleteView(LoginRequiredMixin, RedirectView):
   ```
+  Here the inline comment is only reserved for the most complicated part of the method. Above the two classes, a comment is used to mark that the section of the file is reserved for viewing Followings.
+
 * Classes
   * Official Python Style Guide PEP-8: "Class names should normally use the CapWords convention."
   * Classes should inherit as much from the Django superclasses as possible to prevent developers reinventing the wheel.
   ```
-  
+    class UserDetailView(vf.IsUserRecordMixin, DetailView):
+        template_name = 'user/detail.html'
+        model = AppUser
+        context_object_name = 'userdetail'
+
+    class UserAddView(CreateView):
+        form_class = UserCreationForm
+        success_url = reverse_lazy('login')
+        template_name = 'registration/account_add.html'
+
+    class UserUpdateView(vf.IsUserRecordMixin, UpdateView):
+        template_name = "user/edit.html"
+        model = AppUser
+        fields = '__all__'
+        success_url = reverse_lazy('profile_list')
   ```
+    All of these classes both use CapWords for class names and inherit from a Django superclass.
