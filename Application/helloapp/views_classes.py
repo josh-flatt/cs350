@@ -1,13 +1,13 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
-from django.shortcuts import get_object_or_404 #, render
+from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
-# from django.views import View
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView, RedirectView
 
 from .forms import ProfilePictureForm
 from .models import AppUser, Profile, User, Experience, Education, Skill, Post, Follow
 import helloapp.views_functions as vf
+
 # User Views
 
 class UserHomeView(RedirectView):
