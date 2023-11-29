@@ -2,9 +2,10 @@ from django.shortcuts import render
 from django.views import View
 from django.contrib.auth.mixins import AccessMixin
 from django.shortcuts import get_object_or_404
-from .models import AppUser, Post, Profile, User, Experience, Education, Skill
 from django.urls import reverse_lazy
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView
+
+from .models import AppUser, Post, Profile, User, Experience, Education, Skill
 
 # Create your views here.
 

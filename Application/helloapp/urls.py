@@ -15,10 +15,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-import helloapp.views_classes as vc
-import helloapp.views_functions as vf
 from django.urls import path, include
 from django.views.generic import RedirectView
+
+import helloapp.views_classes as vc
+import helloapp.views_functions as vf
 
 urlpatterns = [
     path('', vf.helloView, name="hello_view"),

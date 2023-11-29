@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from .models import AppUser, Experience, Education, Skill, Post
 
 admin.site.register(AppUser)

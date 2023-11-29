@@ -1,14 +1,13 @@
-from django.shortcuts import render
-from django.views import View
-from .models import AppUser, Profile, User, Experience, Education, Skill, Post, Follow
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
-import helloapp.views_functions as vf
+from django.shortcuts import get_object_or_404, render
 from django.urls import reverse_lazy
-from django.shortcuts import get_object_or_404
+from django.views import View
 from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView, RedirectView
-from .forms import ProfilePictureForm
 
+from .forms import ProfilePictureForm
+from .models import AppUser, Profile, User, Experience, Education, Skill, Post, Follow
+import helloapp.views_functions as vf
 # User Views
 
 class UserHomeView(RedirectView):
@@ -119,7 +118,6 @@ class ProfilePictureUpdateView(vf.IsUserRecordMixin, UpdateView):
 class ExperienceAddView(LoginRequiredMixin, CreateView):
     template_name = "experience/add.html"
     model = Experience
-    fields = '__all__'
     success_url = reverse_lazy('profile_home')
 
     def form_valid(self, form):

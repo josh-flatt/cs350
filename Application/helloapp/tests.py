@@ -1,12 +1,11 @@
+import datetime
+from django.contrib.auth.models import User
+from django.http import HttpRequest
 from django.test import TestCase
 from django.urls import reverse
-import datetime
+
 from .models import AppUser, Profile, Follow, Experience, Education, Skill, Post
-from django.contrib.auth.models import User
-from django.urls import reverse
 from .views_functions import get_appuser, get_profile, IsUserRecordMixin, IsUserProfileMixin, IsUserPostMixin, IsUserProfileFromExpMixin, IsUserProfileFromEduMixin, IsUserProfileFromSkillMixin
-from django.http import HttpRequest
-from .models import AppUser
 
 '''python3 manage.py test'''
 
