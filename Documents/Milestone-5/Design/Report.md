@@ -39,6 +39,7 @@ I helped with implementation this Milestone by testing the application and makin
 * Tested the app's major functions, experimented with input limits to assure a crash couldn't occur as a result.
 * Changing settings.py to be production ready. The most important part of this was setting DEBUG to False, so attackers cant find out our Django version data by giving a bad url.
 * Making sure our web server's HTTP/HTTPS ports were the only open ports. This was done with a traceroute to our digitalocean app, before using the resulting IP to do a port scan.
+* Adding css in some rough areas into the html to make things centered and presentable.
 
 ## AI Prompts
 
