@@ -34,8 +34,7 @@ MEDIA_URL = '/media/'
 # Use this vvv to get secret key from console
 # SECRET_KEY = os.environ.get("SECRET_KEY")
 
-# SECRET_KEY = "2odni2o3nf32fno3i2fi3p3p59re"
-SECRET_KEY = os.environ.get("SECRET_KEY")
+SECRET_KEY = "2odni2o3nf32fno3i2fi3p3p59re"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
