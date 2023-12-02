@@ -29,7 +29,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path("", RedirectView.as_view(url="helloapp/")),
-    path("admin/", admin.site.urls),
+
+    path("nottheadmin/", admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/profile/', RedirectView.as_view(url='/helloapp/user/home')),
     path("helloapp/", include("helloapp.urls")),
