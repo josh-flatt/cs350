@@ -52,7 +52,7 @@ if __name__ == "__main__":
         django_post()
 ```
 
-## Scaling Reccomendation
+## Scaling Recomendation
 
 The most likely scenario I would see for our group needing to scale is this: we have a single small instance hosting the django application, which routes to a postgresql server. This is an affordable setup that works for 90% of our runtime, however on weekdays we have an influx of businessmen looking for new jobs on the clock. AWS would be the best cloud provider to move to for growth, as we found DigitalOcean to take too long for deployments. We would upgrade the postgresql server to have a little more capacity, and we would keep the django application on an EC2 server with similar hardware to our DigitalOcean deployment. However, during peak hours, more instances of the EC2 server would be launched with our application on it using an Auto-Scaling Group. These multiple servers will be communicating to the entire serverbase, but they will orchestrate the data into the one postgresql database.
 
