@@ -11,7 +11,7 @@
     * I spent about 6 hours on Test for Milestone 7
     * Our team met for 1 hour.
 * 5-minute Video Demo
-    * [Milestone 7 - Test](https://drive.google.com/file/d/1nVEK7djcRqR2SFpa_w999hMS26F_P_1l/view?usp=sharing)
+    * [Milestone 7 - Test](https://drive.google.com/file/d/1VatoGl2OmBJ-q2dNwDQ_S-39b5Fg0lyK/view?usp=sharing)
 
 ## Security Review Checklist
 
