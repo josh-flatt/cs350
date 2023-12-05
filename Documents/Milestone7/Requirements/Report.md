@@ -7,6 +7,6 @@
 * What challenges do I have?
   * ---TODO---
 * Engineering investment
-  * I spent about 2 hours on Test for Milestone 7
+  * I spent about 3-ish hours on Requirements for Milestone 7
   * Our team met for 1-ish hours (In class)
 * [Video Demo](https://youtu.be/-------)
