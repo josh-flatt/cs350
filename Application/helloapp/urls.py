@@ -55,4 +55,10 @@ urlpatterns = [
     path('follow/<int:pk>/delete',        vc.FollowDeleteView.as_view(),  name='follow_add'),
 
     path('feed/',        vc.FeedView.as_view(),  name='feed'),
+
+    path('userguide/', vc.GuideMenuView.as_view(), name='guide_menu'),
+    path('userguide/account-guide/', vc.AccountGuideView.as_view(), name='account_guide'),
+    path('userguide/profile-guide/', vc.ProfileGuideView.as_view(), name='profile_guide'),
+    path('userguide/posts-guide/', vc.PostsGuideView.as_view(), name='posts_guide'),
+    path('userguide/feed-guide/', vc.FeedGuideView.as_view(), name='feed_guide'),
 ]

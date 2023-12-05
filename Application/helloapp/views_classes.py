@@ -2,7 +2,7 @@ from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import get_object_or_404
 from django.urls import reverse_lazy
-from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView, RedirectView
+from django.views.generic import CreateView, DeleteView, DetailView, ListView, UpdateView, RedirectView, TemplateView
 
 from .forms import ProfilePictureForm
 from .models import AppUser, Profile, User, Experience, Education, Skill, Post, Follow
@@ -118,6 +118,7 @@ class ProfilePictureUpdateView(vf.IsUserRecordMixin, UpdateView):
 class ExperienceAddView(LoginRequiredMixin, CreateView):
     template_name = "experience/add.html"
     model = Experience
+    fields = '__all__'
     success_url = reverse_lazy('profile_home')
 
     def form_valid(self, form):
@@ -208,3 +209,20 @@ class PostUpdateView(vf.IsUserPostMixin, UpdateView):
     model = Post
     fields = '__all__'
     success_url = reverse_lazy('profile_home')
+
+# User Guide Views
+
+class GuideMenuView(TemplateView):
+    template_name = 'guide/guide_menu.html'
+
+class AccountGuideView(TemplateView):
+    template_name = 'guide/account_guide.html'
+
+class ProfileGuideView(TemplateView):
+    template_name = 'guide/profile_guide.html'
+
+class PostsGuideView(TemplateView):
+    template_name = 'guide/posts_guide.html'
+
+class FeedGuideView(TemplateView):
+    template_name = 'guide/feed_guide.html'
