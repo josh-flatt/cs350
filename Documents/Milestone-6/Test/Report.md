@@ -2,6 +2,8 @@
 
 ## Milestone 6 - Test - Josh Flatt
 
+Here's my testing change for deployment!
+
 * What did I do?
   * I used the given prompts against Chat GPT to complete my work.
   * I wrote documentation on the desired and alternative paths of deployment.
