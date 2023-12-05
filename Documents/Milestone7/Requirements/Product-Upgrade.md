@@ -1,4 +1,4 @@
-# Internal Product Upgrade Notes - Version [1.1.0]
+# Internal Product Upgrade Notes - Version 1.1.0
 
 ## Defect Fixes
 
@@ -10,7 +10,7 @@ The entire web application is off-centered, instead of having equal margins on t
 
 #### Resolution
 
-[Document the technical steps taken to address and fix the defect. Include any code changes, bug tracking details, or other relevant information.]
+[Include detailed technical steps taken to address and fix the defect. Include any code changes, bug tracking details, or other relevant information.]
 
 ### 2. Defect: Displayed time is UTC, not MDT
 
@@ -20,7 +20,7 @@ There are spots in our web application, such as the date/time of when an account
 
 #### Resolution
 
-[Document the technical steps taken to address and fix the defect. Include any code changes, bug tracking details, or other relevant information.]
+[Include detailed technical steps taken to address and fix the defect. Include any code changes, bug tracking details, or other relevant information.]
 
 ### 3. Defect: Navbar is not uniform across site
 
@@ -30,7 +30,7 @@ When navigating from page to page, the navbar will switch from bordering the top
 
 #### Resolution
 
-[Document the technical steps taken to address and fix the defect. Include any code changes, bug tracking details, or other relevant information.]
+[Include detailed technical steps taken to address and fix the defect. Include any code changes, bug tracking details, or other relevant information.]
 
 ## Feature Enhancements
 
@@ -38,40 +38,38 @@ When navigating from page to page, the navbar will switch from bordering the top
 
 #### Description
 
-There are two models in our codebase that represent the same thing, and have a 1-to-1 relationship.
+There are two models in our codebase that represent the same thing and have a 1-to-1 relationship.
 These should be combined to make our code and website experience more concise.
 
 #### Enhancements
 
-- [Enhancement 1]
-- [Enhancement 2]
-- [Enhancement 3]
+- Remove redundancy in models
+- Simplify database queries
+- Improve overall code maintainability
 
 ### 2. Feature Enhancement: Correct container spacing
 
 #### Description
 
-All of the subcontainers in the containers on the web app do not have correct
-spacing within their parent containers. These should be spaced correctly to
-look nicer.
+All subcontainers in the containers on the web app do not have correct spacing within their parent containers. These should be spaced correctly to look nicer.
 
 #### Enhancements
 
-- [Enhancement 1]
-- [Enhancement 2]
-- [Enhancement 3]
+- Implement consistent spacing throughout the application
+- Enhance visual aesthetics and user experience
+- Standardize container layouts for future scalability
 
 ### 3. Feature Enhancement: Remove unused code
 
 #### Description
 
-During initial development, our django application was moved within our codebase, and the old application is no longer used.
+During initial development, our Django application was moved within our codebase, and the old application is no longer used.
 
 #### Enhancements
 
-- [Enhancement 1]
-- [Enhancement 2]
-- [Enhancement 3]
+- Increase codebase cleanliness
+- Improve codebase maintainability
+- Enhance overall system performance
 
 ## New Features/Capabilities
 
@@ -79,14 +77,13 @@ During initial development, our django application was moved within our codebase
 
 #### Description
 
-A managed database must be implemented for our application. Each time that our
-website is rebuilt, all production data is lost.
+A managed database must be implemented for our application. Each time that our website is rebuilt, all production data is lost.
 
 #### Benefits
 
-- [Benefit 1]
-- [Benefit 2]
-- [Benefit 3]
+- Ensure data persistence during application rebuilds
+- Facilitate easier data management and backups
+- Enhance overall application reliability
 
 ### 2. New Feature: Add user-user direct messages
 
@@ -96,9 +93,9 @@ A requested feature for our application is to add peer-peer messaging in the app
 
 #### Benefits
 
-- [Benefit 1]
-- [Benefit 2]
-- [Benefit 3]
+- Enable direct communication between users
+- Enhance user engagement and collaboration
+- Provide a more comprehensive communication platform
 
 ### 3. New Feature: Implement groups
 
@@ -108,9 +105,9 @@ Part of our initial scope of the project included adding groups (like universiti
 
 #### Benefits
 
-- [Benefit 1]
-- [Benefit 2]
-- [Benefit 3]
+- Facilitate organization and categorization of users
+- Enhance user experience with group-based features
+- Enable scalability for future feature developments
 
 ## Implementation Guidelines
 
