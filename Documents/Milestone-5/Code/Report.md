@@ -11,4 +11,4 @@
 * Engineering investment
   * I spent about 4 hours on Code for Milestone 5
   * Our team met for 1-ish hours (In class)
-* [Video Demo](https://youtu.be/-------)
+* [Video Demo](https://youtu.be/bGPo6_7faVM)
