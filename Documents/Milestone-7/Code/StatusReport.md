@@ -6,7 +6,7 @@
 
 2. Created 10-Minute Tour Video
 
-	I created a 10-minute tour video for the product. View the video at [BridgeOut - 10 Minute Tour Video]()
+	I created a 10-minute tour video for the product. View the video at [BridgeOut - 10 Minute Tour Video](https://drive.google.com/file/d/1yfy4DnObnEnJNmdje3DayDgmjBGPub3M/view?usp=sharing)
 
 3. Fixed Bugs
 
